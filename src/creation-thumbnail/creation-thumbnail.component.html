@@ -1,0 +1,23 @@
+<div class="container">
+  <a [routerLink]="['/creation', creation.youtube_id]">
+      <img [src]="thumbnailUrl" class="img-fluid">
+      <div class="overlay">
+        <div class="overlay_text">
+          <h1>{{creation.title}}</h1>
+          <h2>{{creation.creator}}</h2>
+        </div>
+      </div>
+  </a>
+</div>
+
+<!--
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <a [routerLink]="['/creation', creation.youtube_id]">
+      <img [src]="thumbnailUrl" class="img-fluid">
+    </a>
+    <h5 class="card-title">{{ creation.title }}</h5>
+    <p class="card-text">{{ creation.creator }}</p>
+  </div>
+</div>
+-->

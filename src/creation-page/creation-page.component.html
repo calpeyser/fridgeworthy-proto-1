@@ -1,0 +1,16 @@
+<br>
+
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <div class="jumbotron" style="height: 500pt">
+        <iframe width="100%" height="100%" [src]="creationUrl | async" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+    <h2 style="text-align: center">{{(creation | async).title}}</h2>
+    <h3 style="text-align: center"><a [routerLink]="['/creator', (creation | async).creator]">{{(creation | async).creator}}</a></h3>
+    <br>
+    <p>{{(creation | async).description}}</p>
+    </div>
+    <div class="col-2"></div>
+</div>

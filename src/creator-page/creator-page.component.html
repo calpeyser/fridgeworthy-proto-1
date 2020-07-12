@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <br>
+  <div class="card text-center" style="width: 80rem;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img [src]="(creator | async).img_path" class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{(creator | async).name}}</h5>
+          <p class="card-text">{{(creator | async).bio}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-feed [key]="(creator | async).name" [mode]="modes.BY_CREATOR"></app-feed>  
+</div>

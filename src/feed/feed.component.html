@@ -1,0 +1,13 @@
+<div>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let creation of getCreationsWithKey(key) | async">
+        <div class="col-3">
+          <app-creation-thumbnail [creation]="creation"></app-creation-thumbnail>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
