@@ -13,6 +13,11 @@ import { FeedComponent } from '../feed/feed.component';
 import { CreationThumbnailComponent } from '../creation-thumbnail/creation-thumbnail.component';
 import { CreatorPageComponent } from '../creator-page/creator-page.component';
 import { NetflixFeedComponent } from '../netflix-feed/netflix-feed.component';
+import { JoinModalComponent } from '../join-modal/join-modal.component';
+import { ViewerJoinComponent } from '../viewer-join/viewer-join.component';
+import { CreatorJoinComponent } from '../creator-join/creator-join.component';
+import { ConnectJoinComponent } from '../connect-join/connect-join.component';
+
 
 @NgModule({
   imports: [
@@ -31,6 +36,10 @@ import { NetflixFeedComponent } from '../netflix-feed/netflix-feed.component';
     CreationThumbnailComponent,
     CreatorPageComponent,
     NetflixFeedComponent,
+    JoinModalComponent,
+    ViewerJoinComponent,
+    CreatorJoinComponent,
+    ConnectJoinComponent,
   ],
   bootstrap:    [ AppComponent ]
 })
