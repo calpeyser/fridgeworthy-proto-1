@@ -19,7 +19,9 @@ import { CreatorJoinComponent } from '../creator-join/creator-join.component';
 import { ConnectJoinComponent } from '../connect-join/connect-join.component';
 import { LoginModalComponent } from '../login-modal/login-modal.component';
 import { LoginFormComponent } from '../login-form/login-form.component';
-
+import { CommentSectionComponent } from '../comment-section/comment-section.component';
+import { PrimaryCommentComponent } from '../primary-comment/primary-comment.component';
+import { CommentBoxComponent } from '../comment-box/comment-box.component';
 
 @NgModule({
   imports: [
@@ -45,6 +47,9 @@ import { LoginFormComponent } from '../login-form/login-form.component';
     ConnectJoinComponent,
     LoginModalComponent,
     LoginFormComponent,
+    CommentSectionComponent,
+    PrimaryCommentComponent,
+    CommentBoxComponent,
   ],
   bootstrap:    [ AppComponent ]
 })

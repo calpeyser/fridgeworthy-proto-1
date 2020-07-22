@@ -1,0 +1,11 @@
+<br>
+<div class="card" style="width: 38rem;">
+  <div class="card-body">
+    <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <textarea class="form-control" id="commentContent" placeholder="What do you think?" formControlName="content"></textarea>
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
