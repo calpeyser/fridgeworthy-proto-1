@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Observable } from 'rxjs'
+
 import { Creation, PrimaryComment } from '../creation/creation';
-import { CreationService } from '../creation/creation.servi'
+import { CreationService } from '../creation/creation.service';
 
 @Component({
   selector: 'app-comment-section',
@@ -8,44 +10,13 @@ import { CreationService } from '../creation/creation.servi'
   styleUrls: ['./comment-section.component.css']
 })
 export class CommentSectionComponent implements OnInit {
-  @Input() creation : Creation;
+  @Input() creation : Observable<Creation>;
 
   constructor(private creationService : CreationService) { 
   }
 
   ngOnInit() {
-    this.creation.comments = [];
-    var comment1 : PrimaryComment = {
-      comment : {
-        author: 'author1',
-        content: 'I think such and such',
-      },
-      replies: [],
-    };
-    var comment2 : PrimaryComment = {
-      comment : {
-        author: 'author2',
-        content: 'oh yea? well that is crazy',
-      },
-      replies: [{
-        author: 'author3',
-        content: 'Yea, you\'re nuts',
-      }, {
-        author: 'author4',
-        content: 'Guys, give him a break.'
-      }],
-    };
-    var comment3 : PrimaryComment = {
-      comment : {
-        author: 'author1',
-        content: 'I still think such and such',
-      },
-      replies: [],
-    };
-
-    this.creation.comments.push(comment1)
-    this.creation.comments.push(comment2)
-    this.creation.comments.push(comment3)
+    this.creationService.addDummyComments()
   }
 
   commentIsSubmitted(event : any) {
@@ -53,6 +24,7 @@ export class CommentSectionComponent implements OnInit {
       comment: event,
       replies: []
     }
+
     this.creation.comments.push(submittedComment)
     this.updateCreation(this.creation)
   }
