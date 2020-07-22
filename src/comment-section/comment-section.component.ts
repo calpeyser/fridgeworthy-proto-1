@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { PrimaryComment, Comment } from '../creation/creation';
+import { Creation, PrimaryComment } from '../creation/creation';
+import { CreationService } from '../creation/creation.servi'
 
 @Component({
   selector: 'app-comment-section',
@@ -7,13 +8,13 @@ import { PrimaryComment, Comment } from '../creation/creation';
   styleUrls: ['./comment-section.component.css']
 })
 export class CommentSectionComponent implements OnInit {
-  @Input() primaryComments : PrimaryComment[] = [];
+  @Input() creation : Creation;
 
-  constructor() { 
+  constructor(private creationService : CreationService) { 
   }
 
   ngOnInit() {
-    this.primaryComments = [];
+    this.creation.comments = [];
     var comment1 : PrimaryComment = {
       comment : {
         author: 'author1',
@@ -26,7 +27,13 @@ export class CommentSectionComponent implements OnInit {
         author: 'author2',
         content: 'oh yea? well that is crazy',
       },
-      replies: [],
+      replies: [{
+        author: 'author3',
+        content: 'Yea, you\'re nuts',
+      }, {
+        author: 'author4',
+        content: 'Guys, give him a break.'
+      }],
     };
     var comment3 : PrimaryComment = {
       comment : {
@@ -36,9 +43,9 @@ export class CommentSectionComponent implements OnInit {
       replies: [],
     };
 
-    this.primaryComments.push(comment1)
-    this.primaryComments.push(comment2)
-    this.primaryComments.push(comment3)
+    this.creation.comments.push(comment1)
+    this.creation.comments.push(comment2)
+    this.creation.comments.push(comment3)
   }
 
   commentIsSubmitted(event : any) {
@@ -46,7 +53,12 @@ export class CommentSectionComponent implements OnInit {
       comment: event,
       replies: []
     }
-    this.primaryComments.push(submittedComment)
+    this.creation.comments.push(submittedComment)
+    this.updateCreation(this.creation)
+  }
+
+  updateCreation(creation : Creation) {
+    this.creationService.updateCreation(creation.id, creation)
   }
 
 }

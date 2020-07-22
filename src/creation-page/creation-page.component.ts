@@ -29,5 +29,4 @@ export class CreationPageComponent implements OnInit {
           .pipe(map(c => this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/" + c.youtube_id)))
     })
   }
-
 }

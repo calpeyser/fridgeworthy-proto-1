@@ -1,4 +1,4 @@
 <div class="container">
-  <app-primary-comment *ngFor="let primaryComment of primaryComments" [primaryComment]="primaryComment"></app-primary-comment>
+  <app-primary-comment *ngFor="let primaryComment of creation.comments" [primaryComment]="primaryComment"></app-primary-comment>
   <app-comment-box (submittedComment)="this.commentIsSubmitted($event)"></app-comment-box>
 </div>

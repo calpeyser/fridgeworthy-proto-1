@@ -40,4 +40,13 @@ export class CreationService {
     return of(filteredVideos)
   }
 
+  updateCreation(id : String, creation : Creation) {
+    var to_replace = SILLY_ANIMATION_VIDEOS.find(creation => {
+      creation.id == id;
+    })
+    var index = SILLY_ANIMATION_VIDEOS.indexOf(to_replace)
+    SILLY_ANIMATION_VIDEOS[index] = creation
+    console.log("Id " + id + " replaced")
+  } 
+
 }

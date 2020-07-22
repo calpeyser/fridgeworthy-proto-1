@@ -9,6 +9,7 @@ export interface PrimaryComment {
 }
 
 export interface Creation {
+  id : String;
   creator: String;
   title: String;
   description: String;
