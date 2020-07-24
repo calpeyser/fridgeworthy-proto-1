@@ -13,6 +13,7 @@ import { Creation } from '../creation/creation';
   styleUrls: ['./creation-page.component.css']
 })
 export class CreationPageComponent implements OnInit {
+  id : String;
   creation : Observable<Creation>
   creationUrl : Observable<SafeUrl>
 
@@ -24,10 +25,10 @@ export class CreationPageComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      this.creation = this.creationService.getCreationByYouTubeID(params.get('id'))
+      this.id = params.get('id')
+      this.creation = this.creationService.getCreationByID(this.id)
       this.creationUrl = this.creation
           .pipe(map(c => this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/" + c.youtube_id)))
     })
   }
-
 }

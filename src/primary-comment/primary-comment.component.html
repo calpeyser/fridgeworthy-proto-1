@@ -1,0 +1,23 @@
+<br>
+<div class="card" style="width: 38rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{primaryComment.comment.author}}</h5>
+    <p class="card-text">{{primaryComment.comment.content}}</p>
+    <div class="row">
+      <div class="col-10">
+      </div>
+      <div class="col-2">
+        <button type="button" class="btn btn-primary" (click)="onReplyButtonClicked()">Reply</button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-secondary-comment *ngFor="let reply of primaryComment.replies" [comment]="reply"></app-secondary-comment>
+<div class="row">
+  <div class="col-2">
+  </div>
+  <div class="col-10">
+    <app-comment-box *ngIf="replyButtonClicked" (submittedComment)="this.commentIsSubmitted($event)"></app-comment-box>
+  </div>
+</div>
+
