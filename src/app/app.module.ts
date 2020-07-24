@@ -23,7 +23,6 @@ import { CommentSectionComponent } from '../comment-section/comment-section.comp
 import { PrimaryCommentComponent } from '../primary-comment/primary-comment.component';
 import { CommentBoxComponent } from '../comment-box/comment-box.component';
 import { SecondaryCommentComponent } from '../secondary-comment/secondary-comment.component';
-import { RepliesComponent } from '../replies/replies.component';
 
 @NgModule({
   imports: [
@@ -53,7 +52,6 @@ import { RepliesComponent } from '../replies/replies.component';
     PrimaryCommentComponent,
     CommentBoxComponent,
     SecondaryCommentComponent,
-    RepliesComponent,
   ],
   bootstrap:    [ AppComponent ]
 })

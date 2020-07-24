@@ -19,8 +19,8 @@ export class CommentSectionComponent implements OnInit {
   ngOnInit() {
   }
 
-  addDummyComments(creation : Creation) {
-    this.creationService.addDummyComments(creation.id)
+  addDummyComments() {
+    this.creationService.addDummyComments(this.creationId)
   }
 
   commentIsSubmitted(event : any) {
@@ -28,6 +28,6 @@ export class CommentSectionComponent implements OnInit {
       comment: event,
       replies: []
     }
-    this.creationService.addCommentToCreation(this.creationId, submittedComment)
+    this.creationService.addPrimaryCommentToCreation(this.creationId, submittedComment)
   }
 }

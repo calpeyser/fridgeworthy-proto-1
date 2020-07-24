@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject, of, pipe } from 'rxjs'
 import { map, single } from 'rxjs/operators';
 
-import { Creation, PrimaryComment } from './creation';
+import { Creation, PrimaryComment, Comment } from './creation';
 import { SILLY_ANIMATION_VIDEOS } from './silly_animation_videos';
 
 @Injectable({
@@ -58,23 +58,33 @@ export class CreationService {
     }
   }
 
-  addCommentToCreation(id : String, newComment : PrimaryComment) {
-    console.log(id)
+  addPrimaryCommentToCreation(id : String, newComment : PrimaryComment) {
     var creations : Creation[] = this.creationsSubject.getValue()
     var to_replace = creations.find(creation => {
       return creation.id == id;
     })
-    console.log(to_replace)
     var index = creations.indexOf(to_replace)
     to_replace.comments.push(newComment)
     creations[index] = to_replace
     this.creationsSubject.next(creations)
   } 
 
+  addReplyToPrimaryComment(creationId : String, primaryCommentIndex : number, newReply : Comment) {
+    var creations : Creation[] = this.creationsSubject.getValue()
+    var creation_to_modify = creations.find(creation => {
+      return creation.id == creationId;
+    })
+    creation_to_modify.comments[primaryCommentIndex].replies.push(newReply)
+
+    var creationIndex = creations.indexOf(creation_to_modify)
+    creations[creationIndex] = creation_to_modify
+    this.creationsSubject.next(creations)
+  }
+
   addDummyComments(id: String) {
     var creations : Creation[] = this.creationsSubject.getValue()
     var to_replace = creations.find(creation => {
-      creation.id = id;
+      return creation.id = id;
     })
     var index = creations.indexOf(to_replace)
 

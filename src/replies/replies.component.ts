@@ -8,10 +8,10 @@ import { Comment } from '../creation/creation';
 })
 export class RepliesComponent implements OnInit {
   @Input() replies : Comment[];
+  @Input() replyBoxOpen : boolean = false;
 
   constructor() { }
 
   ngOnInit() {
   }
-
 }

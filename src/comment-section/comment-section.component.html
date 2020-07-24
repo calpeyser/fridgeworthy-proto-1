@@ -1,4 +1,10 @@
 <div class="container">
-  <app-primary-comment *ngFor="let primaryComment of (creation | async).comments" [primaryComment]="primaryComment"></app-primary-comment>
+  <button (click)="addDummyComments()">Add dummy comments</button>
+  <br>
+  <app-primary-comment *ngFor="let primaryComment of (creation | async).comments; let i = index" 
+    [primaryComment]="primaryComment"
+    [primaryCommentIndex]="i"
+    [creationId]="creationId">
+  </app-primary-comment>
   <app-comment-box (submittedComment)="this.commentIsSubmitted($event)"></app-comment-box>
 </div>
