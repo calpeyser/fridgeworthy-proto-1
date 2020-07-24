@@ -18,10 +18,10 @@ export class CreationService {
     })
   }
 
-  getCreationByYouTubeID(yid : String) : Observable<Creation> {
+  getCreationByID(id : String) : Observable<Creation> {
     const result : Observable<Creation> = this.creationsSubject.pipe(map(creations => {
       return creations.filter(creation => {
-        return creation.youtube_id == yid;
+        return creation.id == id;
       })[0]
     }))
     return result

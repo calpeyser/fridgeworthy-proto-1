@@ -1,4 +1,4 @@
 <div class="container">
   <app-primary-comment *ngFor="let primaryComment of (creation | async).comments" [primaryComment]="primaryComment"></app-primary-comment>
-  <app-comment-box (submittedComment)="this.commentIsSubmitted($event)"></app-comment-box>
+  <app-comment-box (submittedComment)="this.commentIsSubmitted(creation, $event)"></app-comment-box>
 </div>

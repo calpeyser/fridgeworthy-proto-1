@@ -10,27 +10,27 @@ import { CreationService } from '../creation/creation.service';
   styleUrls: ['./comment-section.component.css']
 })
 export class CommentSectionComponent implements OnInit {
+  @Input() creationId: String;
   @Input() creation : Observable<Creation>;
 
   constructor(private creationService : CreationService) { 
   }
 
   ngOnInit() {
-    this.creationService.addDummyComments()
   }
 
-  commentIsSubmitted(event : any) {
+  addDummyComments(creation : Creation) {
+    this.creationService.addDummyComments(creation.id)
+  }
+
+  commentIsSubmitted(creationObs : Observable<Creation>, event : any) {
     var submittedComment : PrimaryComment = {
       comment: event,
       replies: []
     }
-
-    this.creation.comments.push(submittedComment)
-    this.updateCreation(this.creation)
+    creationObs.toPromise().then(creation => {
+      creation.comments.push(submittedComment)
+      this.creationService.updateCreation(creation.id, creation)
+    })
   }
-
-  updateCreation(creation : Creation) {
-    this.creationService.updateCreation(creation.id, creation)
-  }
-
 }
