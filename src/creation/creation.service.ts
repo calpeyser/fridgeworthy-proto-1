@@ -58,13 +58,16 @@ export class CreationService {
     }
   }
 
-  updateCreation(id : String, newCreation : Creation) {
+  addCommentToCreation(id : String, newComment : PrimaryComment) {
+    console.log(id)
     var creations : Creation[] = this.creationsSubject.getValue()
     var to_replace = creations.find(creation => {
-      creation.id == id;
+      return creation.id == id;
     })
+    console.log(to_replace)
     var index = creations.indexOf(to_replace)
-    creations[index] = newCreation
+    to_replace.comments.push(newComment)
+    creations[index] = to_replace
     this.creationsSubject.next(creations)
   } 
 

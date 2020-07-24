@@ -23,14 +23,11 @@ export class CommentSectionComponent implements OnInit {
     this.creationService.addDummyComments(creation.id)
   }
 
-  commentIsSubmitted(creationObs : Observable<Creation>, event : any) {
+  commentIsSubmitted(event : any) {
     var submittedComment : PrimaryComment = {
       comment: event,
       replies: []
     }
-    creationObs.toPromise().then(creation => {
-      creation.comments.push(submittedComment)
-      this.creationService.updateCreation(creation.id, creation)
-    })
+    this.creationService.addCommentToCreation(this.creationId, submittedComment)
   }
 }
