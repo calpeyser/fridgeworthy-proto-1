@@ -38,7 +38,7 @@ export class NetflixFeedComponent implements OnInit {
     if (this.mode == FeedMode.BY_CATEGORY) {
       creationStream = this.store.pipe(select(CreationSelectors.selectCreationsByCategory, { category: key }))
     } else if (this.mode == FeedMode.BY_CREATOR) {
-      creationStream = this.creationService.getCreationsByCreatorName(key)
+      creationStream = this.store.pipe(select(CreationSelectors.selectCreationsByCreatorId, { creatorId: key }))
     }
     var splitCreations : Observable<CreationSection[]>;
 

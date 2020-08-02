@@ -26,7 +26,11 @@ function creationsByCreatorId(creations: Creation[], props) : Creation[] {
   if (creatorId == null) {
     console.log('creationsByCreatorId called with now creatorId')
   } else {
-    return creations.filter((creation))
+    return creations.filter((creation : Creation) => creation.creator_id == creatorId)
   }
 }
 
+export const selectCreationsByCreatorId = createSelector(
+  creationsFromAppState,
+  creationsByCreatorId
+);

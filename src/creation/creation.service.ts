@@ -27,37 +27,6 @@ export class CreationService {
     return result
   }
 
-  getCreationsByCategory(category : String) : Observable<Creation[]> {
-    if (category == null || category == '') {
-      return this.creationsSubject
-    } else {
-      const result : Observable<Creation[]> = this.creationsSubject.pipe(
-        map(creations => {
-          return creations.filter(creation => {
-            return creation.category == category;
-          })
-        })
-      )
-      return result;
-    }
-  }
-
-  getCreationsByCreatorName(creatorName : String) : Observable<Creation[]> {
-    if (creatorName == null || creatorName == '') {
-      return this.creationsSubject
-    }
-    else {
-      const result : Observable<Creation[]> = this.creationsSubject.pipe(
-        map(creations => {
-          return creations.filter(creation => {
-            return creation.creator == creatorName;
-          })
-        })
-      )
-      return result;
-    }
-  }
-
   addPrimaryCommentToCreation(id : String, newComment : PrimaryComment) {
     var creations : Creation[] = this.creationsSubject.getValue()
     var to_replace = creations.find(creation => {
