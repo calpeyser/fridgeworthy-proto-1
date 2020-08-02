@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
+
+import * as creationReducer from '../creation/creation.reducer';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule} from './app-routing.module'
@@ -30,6 +33,7 @@ import { SecondaryCommentComponent } from '../secondary-comment/secondary-commen
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    StoreModule.forRoot({creation : creationReducer.reducer })
   ],
   declarations: [
     AppComponent,

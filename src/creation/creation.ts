@@ -10,10 +10,18 @@ export interface PrimaryComment {
 
 export interface Creation {
   id : String;
-  creator: String;
+  creator_id: Number;
   title: String;
   description: String;
   youtube_id: String;
   category: String;
   comments: PrimaryComment[];
+}
+
+export interface State {
+  creations: Creation[];
+}
+
+export const initialState: State = {
+  creations: []
 }

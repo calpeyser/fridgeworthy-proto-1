@@ -4,7 +4,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
   {
     id: "1",
     title: 'Funny videos : Funny Cartoons -  Try not to laugh or grin',
-    creator: 'Creator_4',
+    creator_id: 4,
     youtube_id: 'sra_H9o7pjA',
     description: 'Funny videos : Funny Cartoons - Try not to laugh or grin .We update videos once a day for you to get your laughs! IKE, COMMENT ...',
     category: 'Category 3',
@@ -13,7 +13,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
   {
     id: "2",
     title: 'CRACKÉ - UPSET STOMACH | Funny Videos For Kids | Videos For Kids | WildBrain Cartoons',
-    creator: 'Creator_7',
+    creator_id: 7,
     youtube_id: 'kdwRWC5yc20',
     description: 'Ed must save his eggs from inside a crocodile.SUBSCRIBE for more Cracké: http://bit.ly/2zcmQxbMore about Cracké: http ...',
     category: 'Category 1',
@@ -22,7 +22,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
   {
     id: "3",
     title: 'Three Little Pigs Cartoon | Silly Crocodile Fairy Tales & Bedtime Stories for Kids | 3 Little Pigs',
-    creator: 'Creator_2',
+    creator_id: 2,
     youtube_id: 'WhlLUvWr7Ng',
     description: 'Three Little Pigs!  Three Little Pigs!  Here’s a silly crocodile cartoon about your fairy tale Three Little Pigs story! OK ...',
     category: 'Category 2',
@@ -31,7 +31,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
   {
     id: "4",
     title: 'Silly Symphony Lambert The Sheepish Lion',
-    creator: 'Creator_8',
+    creator_id: 8,
     youtube_id: 'NCfaBjdh5V4',
     description: 'Subscribe My Channel for More & New Cartoon videos ▻▻ https://goo.gl/UgQckA You will find nice cartoon videos, Cartoon for ...',
     category: 'Category 2',
@@ -40,7 +40,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
   {
     id: "5",
     title: 'Animation Silly Symphony Flowers And Trees Disney Movies   Movies For Kids   Animation6',
-    creator: 'Creator_0',
+    creator_id: 0,
     youtube_id: 'rH-OTZm0Xtk',
     description: 'Subscribe My Channel for More & New Cartoon videos ▻▻ https://goo.gl/LcZxEu You will find nice cartoon videos, Cartoon for ...',
     category: 'Category 3',
@@ -49,7 +49,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
   {
     id: "6",
     title: "WORLD'S MOST HILARIOUS FORTNITE ANIMATIONS!",
-    creator: 'Creator_3',
+    creator_id: 3,
     youtube_id: '85n_e9XVZAM',
     description: "WORLD'S MOST HILARIOUS FORTNITE ANIMATIONS!Videos reacted to:Hybrid & the Sunny Steps | The Squad (Fortnite Animation ...",
     category: 'Category 2',

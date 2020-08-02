@@ -1,6 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CreationService } from '../creation/creation.service';
+import { Store, select } from '@ngrx/store';
+
 import { Creation } from '../creation/creation';
+import * as CreationSelectors from '../creation/creation.selector';
+
 import { FeedMode } from '../feed/feed.component'
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -26,14 +29,14 @@ export class NetflixFeedComponent implements OnInit {
   @Input() mode : FeedMode;
   @Input() carouselID : Number;
 
-  constructor(private creationService : CreationService) { }
+  constructor(private store : Store) { }
 
   ngOnInit() {
   }
   getSectionsWithKey(key : String) : Observable<CreationSection[]> {
     var creationStream : Observable<Creation[]>;
     if (this.mode == FeedMode.BY_CATEGORY) {
-      creationStream = this.creationService.getCreationsByCategory(key)
+      creationStream = this.store.pipe(select(CreationSelectors.selectCreationsByCategory, { category: key }))
     } else if (this.mode == FeedMode.BY_CREATOR) {
       creationStream = this.creationService.getCreationsByCreatorName(key)
     }
