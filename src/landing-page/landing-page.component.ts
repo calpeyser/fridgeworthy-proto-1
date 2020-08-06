@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FeedMode } from '../feed/feed.component';
+import { FeedMode } from '../netflix-feed/netflix-feed.component';
 
 @Component({
   selector: 'app-landing-page',

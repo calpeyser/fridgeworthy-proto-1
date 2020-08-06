@@ -1,8 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs'
+import { Store } from '@ngrx/store';
 
 import { Creation, PrimaryComment } from '../creation/creation';
-import { CreationService } from '../creation/creation.service';
+import * as ComponentActions from './comment-section.actions';
+
 
 @Component({
   selector: 'app-comment-section',
@@ -10,17 +12,19 @@ import { CreationService } from '../creation/creation.service';
   styleUrls: ['./comment-section.component.css']
 })
 export class CommentSectionComponent implements OnInit {
-  @Input() creationId: String;
+  @Input() creationId: Number;
   @Input() creation : Observable<Creation>;
 
-  constructor(private creationService : CreationService) { 
+  constructor(private store : Store) { 
   }
 
   ngOnInit() {
   }
 
   addDummyComments() {
-    this.creationService.addDummyComments(this.creationId)
+    this.store.dispatch(ComponentActions.add_dummy_comments({
+      'creationId' : this.creationId
+    }))
   }
 
   commentIsSubmitted(event : any) {
@@ -28,6 +32,9 @@ export class CommentSectionComponent implements OnInit {
       comment: event,
       replies: []
     }
-    this.creationService.addPrimaryCommentToCreation(this.creationId, submittedComment)
+    this.store.dispatch(ComponentActions.add_primary_comment({
+      'creationId' : this.creationId,
+      'comment' : submittedComment
+    }))
   }
 }

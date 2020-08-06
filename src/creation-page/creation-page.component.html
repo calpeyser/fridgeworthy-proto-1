@@ -8,7 +8,7 @@
       </div>
 
     <h2 style="text-align: center">{{(creation | async).title}}</h2>
-    <h3 style="text-align: center"><a [routerLink]="['/creator', (creation | async).creator]">{{(creation | async).creator}}</a></h3>
+    <h3 style="text-align: center"><a [routerLink]="['/creator', (creator | async).id]">{{(creator | async).name}}</a></h3>
     <br>
     <p>{{(creation | async).description}}</p>
     </div>

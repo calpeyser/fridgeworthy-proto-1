@@ -7,7 +7,7 @@ import { CreatorPageComponent } from '../creator-page/creator-page.component'
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'creation/:id', component: CreationPageComponent },
-  { path: 'creator/:name', component: CreatorPageComponent}
+  { path: 'creator/:id', component: CreatorPageComponent}
 ];
 
 @NgModule({

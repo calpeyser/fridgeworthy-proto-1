@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CreationService } from '../creation/creation.service';
 import { PrimaryComment, Comment } from '../creation/creation';
+import { Store } from '@ngrx/store';
+
+import * as ComponentActions from './primary-comment.actions';
 
 @Component({
   selector: 'app-primary-comment',
@@ -10,11 +12,11 @@ import { PrimaryComment, Comment } from '../creation/creation';
 export class PrimaryCommentComponent implements OnInit {
   @Input() primaryComment : PrimaryComment;
   @Input() primaryCommentIndex : number;
-  @Input() creationId : String;
+  @Input() creationId : Number;
 
   replyButtonClicked = false 
 
-  constructor(private creationService : CreationService) { }
+  constructor(private store : Store) { }
 
   onReplyButtonClicked() {
     this.replyButtonClicked = true
@@ -25,7 +27,11 @@ export class PrimaryCommentComponent implements OnInit {
 
   commentIsSubmitted(event : any) {
     var submittedComment : Comment = event
-    this.creationService.addReplyToPrimaryComment(this.creationId, this.primaryCommentIndex, submittedComment)
+    this.store.dispatch(ComponentActions.add_reply({
+      'creationId': this.creationId,
+      'primaryCommentIndex': this.primaryCommentIndex,
+      'reply': submittedComment
+    }))
     this.replyButtonClicked = false
   }
 }

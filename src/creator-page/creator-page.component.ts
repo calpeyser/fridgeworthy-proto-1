@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { Store, select } from '@ngrx/store';
 
 import { Creator } from '../creator/creator';
-import { CreatorService } from '../creator/creator.service';
-import { FeedMode } from '../feed/feed.component';
+import * as CreatorSelectors from '../creator/creator.selector';
+import { FeedMode } from '../netflix-feed/netflix-feed.component';
 
 @Component({
   selector: 'app-creator-page',
@@ -16,12 +17,12 @@ export class CreatorPageComponent implements OnInit {
   modes = FeedMode;
 
   constructor(
-    private creatorService : CreatorService,
+    private store : Store,
     private route : ActivatedRoute) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      this.creator = this.creatorService.getCreatorByName(params.get('name'))
+      this.creator = this.store.pipe(select(CreatorSelectors.selectCreationById, { creatorId: Number(params.get('id')) }))
     })
   }
 

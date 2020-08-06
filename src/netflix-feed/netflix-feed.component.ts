@@ -1,11 +1,17 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CreationService } from '../creation/creation.service';
+import { Store, select } from '@ngrx/store';
+
 import { Creation } from '../creation/creation';
-import { FeedMode } from '../feed/feed.component'
+import * as CreationSelectors from '../creation/creation.selector';
+
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 const CREATIONS_PER_SECTION = 4
+
+export enum FeedMode {
+  BY_CATEGORY, BY_CREATOR
+}
 
 class CreationSection {
   creations : Creation[]
@@ -26,16 +32,16 @@ export class NetflixFeedComponent implements OnInit {
   @Input() mode : FeedMode;
   @Input() carouselID : Number;
 
-  constructor(private creationService : CreationService) { }
+  constructor(private store : Store) { }
 
   ngOnInit() {
   }
   getSectionsWithKey(key : String) : Observable<CreationSection[]> {
     var creationStream : Observable<Creation[]>;
     if (this.mode == FeedMode.BY_CATEGORY) {
-      creationStream = this.creationService.getCreationsByCategory(key)
+      creationStream = this.store.pipe(select(CreationSelectors.selectCreationsByCategory, { category: key }))
     } else if (this.mode == FeedMode.BY_CREATOR) {
-      creationStream = this.creationService.getCreationsByCreatorName(key)
+      creationStream = this.store.pipe(select(CreationSelectors.selectCreationsByCreatorId, { creatorId: key }))
     }
     var splitCreations : Observable<CreationSection[]>;
 
@@ -77,10 +83,6 @@ export class NetflixFeedComponent implements OnInit {
           section.prevSection = index - 1
         }
       })
-
-      if (key == 'Category 2') {
-        console.log(res)
-      }
       return res;
     }))
 
