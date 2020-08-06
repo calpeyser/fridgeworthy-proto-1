@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 import { Creator } from '../creator/creator';
 import { CreatorService } from '../creator/creator.service';
-import { FeedMode } from '../feed/feed.component';
+import { FeedMode } from '../netflix-feed/netflix-feed.component';
 
 @Component({
   selector: 'app-creator-page',

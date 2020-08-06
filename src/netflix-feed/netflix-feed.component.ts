@@ -4,11 +4,14 @@ import { Store, select } from '@ngrx/store';
 import { Creation } from '../creation/creation';
 import * as CreationSelectors from '../creation/creation.selector';
 
-import { FeedMode } from '../feed/feed.component'
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 const CREATIONS_PER_SECTION = 4
+
+export enum FeedMode {
+  BY_CATEGORY, BY_CREATOR
+}
 
 class CreationSection {
   creations : Creation[]
@@ -80,10 +83,6 @@ export class NetflixFeedComponent implements OnInit {
           section.prevSection = index - 1
         }
       })
-
-      if (key == 'Category 2') {
-        console.log(res)
-      }
       return res;
     }))
 

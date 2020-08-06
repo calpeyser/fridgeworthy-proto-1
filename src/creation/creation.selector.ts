@@ -2,7 +2,7 @@ import { createSelector } from '@ngrx/store';
 import { Creation } from './creation';
 
 function creationsFromAppState(state : any) : Creation[] {
-  return state.creations
+  return state.creation.creations
 }
 
 function creationsByCategoryFilter(creations : Creation[], props) : Creation[] {
@@ -14,7 +14,8 @@ function creationsByCategoryFilter(creations : Creation[], props) : Creation[] {
     console.log('creationsByCategoryFilter called with null creations')
     return [];
   } else {
-    return creations.filter((creation : Creation) => creation.category == category);
+    var res = creations.filter((creation : Creation) => creation.category == category);
+    return res
   }
 }
 
