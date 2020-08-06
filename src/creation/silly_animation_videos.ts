@@ -2,7 +2,7 @@ import { Creation, PrimaryComment } from './creation';
 
 export const SILLY_ANIMATION_VIDEOS: Creation[] = [
   {
-    id: "1",
+    id: 1,
     title: 'Funny videos : Funny Cartoons -  Try not to laugh or grin',
     creator_id: 4,
     youtube_id: 'sra_H9o7pjA',
@@ -11,7 +11,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "2",
+    id: 2,
     title: 'CRACKÉ - UPSET STOMACH | Funny Videos For Kids | Videos For Kids | WildBrain Cartoons',
     creator_id: 7,
     youtube_id: 'kdwRWC5yc20',
@@ -20,7 +20,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "3",
+    id: 3,
     title: 'Three Little Pigs Cartoon | Silly Crocodile Fairy Tales & Bedtime Stories for Kids | 3 Little Pigs',
     creator_id: 2,
     youtube_id: 'WhlLUvWr7Ng',
@@ -29,7 +29,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "4",
+    id: 4,
     title: 'Silly Symphony Lambert The Sheepish Lion',
     creator_id: 8,
     youtube_id: 'NCfaBjdh5V4',
@@ -38,7 +38,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "5",
+    id: 5,
     title: 'Animation Silly Symphony Flowers And Trees Disney Movies   Movies For Kids   Animation6',
     creator_id: 0,
     youtube_id: 'rH-OTZm0Xtk',
@@ -47,7 +47,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "6",
+    id: 6,
     title: "WORLD'S MOST HILARIOUS FORTNITE ANIMATIONS!",
     creator_id: 3,
     youtube_id: '85n_e9XVZAM',
@@ -56,7 +56,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "7",
+    id: 7,
     title: 'FNaF FUNNY Try Not To Laugh Challenge 2020',
     creator_id: 3,
     youtube_id: 'f5JZTvGFgV8',
@@ -65,7 +65,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "8",
+    id: 8,
     title: 'Funny CGI 3d Animated Short Film ** BIG CATCH ** Hilarious CGI Animation Kids Cartoon by Moles Merlo',
     creator_id: 2,
     youtube_id: 'Anw_bhEzsys',
@@ -74,7 +74,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "9",
+    id: 9,
     title: 'Cartoon Box Catch Up 14 | The BEST of Cartoon Box | Hilarious Cartoon Compilation | Marilyn Monroe',
     creator_id: 0,
     youtube_id: 'KXrrocvk2k4',
@@ -83,7 +83,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "10",
+    id: 10,
     title: 'The Lion King  Silly Symphony Lambert | Disney Cartoon',
     creator_id: 9,
     youtube_id: 'VvY50vOIWl8',
@@ -92,7 +92,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "11",
+    id: 11,
     title: 'Silly Symphony Flowers And Trees',
     creator_id: 9,
     youtube_id: 'gjnzlj5ihkY',
@@ -101,7 +101,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "12",
+    id: 12,
     title: 'HILARIOUS ANIMATIONS To Watch When You WANT TO LAUGH!',
     creator_id: 1,
     youtube_id: 'QTiaaRz93c4',
@@ -110,7 +110,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "13",
+    id: 13,
     title: 'Silly Symphonies - The Skeleton Dance',
     creator_id: 1,
     youtube_id: 'vOGhAV-84iI',
@@ -119,7 +119,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "14",
+    id: 14,
     title: 'Silly Symphony Little Hiawatha',
     creator_id: 7,
     youtube_id: 'PZ7D6kp8PIU',
@@ -128,7 +128,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "15",
+    id: 15,
     title: 'HILARIOUS Minecraft Animation Which Will Make You CRY Of LAUGHTER!',
     creator_id: 2,
     youtube_id: 'FNApaFRSSyc',
@@ -137,7 +137,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "16",
+    id: 16,
     title: 'Animation Silly Symphony Lambert The Sheepish Lion Disney Movies   Movies For Kids   A6',
     creator_id: 0,
     youtube_id: 'D_gXvAUUdUQ',
@@ -146,7 +146,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "17",
+    id: 17,
     title: 'Try Watching This HILARIOUS Animation WITHOUT Laughing!',
     creator_id: 8,
     youtube_id: 'dJUhkXTjewM',
@@ -155,7 +155,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "19",
+    id: 19,
     title: 'MOANA | Funniest Hei Hei moments from the Disney Animated Movie',
     creator_id: 3,
     youtube_id: 'X9psEx5TNTU',
@@ -164,7 +164,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "20",
+    id: 20,
     title: 'Animation Silly Symphony Water Babies Disney Movies   Movies For Kids   Animation Movi6',
     creator_id: 8,
     youtube_id: '30OE97OtZ9E',
@@ -173,7 +173,7 @@ export const SILLY_ANIMATION_VIDEOS: Creation[] = [
     comments: [],
   },
   {
-    id: "21",
+    id: 21,
     title: 'Animation Silly Symphony Little Hiawatha Disney Movies   Movies For Kids   Animation M6',
     creator_id: 0,
     youtube_id: 'bulNsPAeLRQ',
