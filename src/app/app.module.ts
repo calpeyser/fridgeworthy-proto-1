@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 
 import * as creationReducer from '../creation/creation.reducer';
+import * as creatorReducer from '../creator/creator.reducer';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule} from './app-routing.module'
@@ -32,7 +33,10 @@ import { SecondaryCommentComponent } from '../secondary-comment/secondary-commen
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    StoreModule.forRoot({creation : creationReducer.reducer })
+    StoreModule.forRoot({
+      creation : creationReducer.reducer,
+      creator : creatorReducer.reducer,
+    }),
   ],
   declarations: [
     AppComponent,
