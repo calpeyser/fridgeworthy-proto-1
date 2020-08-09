@@ -81,7 +81,7 @@ export class NetflixFeedComponent implements OnInit {
           currentSection.creations = [creation]
         }
       }
-      if (currentSection.creations.length > 0 && currentSection.creations.length < this.creationsPerSection(currentSectionNumber)) {
+      if (currentSection.creations.length > 0) {
         res.push(currentSection)
       }
 

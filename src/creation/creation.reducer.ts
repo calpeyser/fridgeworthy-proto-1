@@ -2,6 +2,7 @@ import { Action, createReducer, on } from '@ngrx/store';
 import * as AppRootActions from '../app/app.actions';
 import * as CommentSectionActions from '../comment-section/comment-section.actions'
 import * as PrimaryCommentActions from '../primary-comment/primary-comment.actions'
+import * as ModifyCreationFormAactions from '../modify-creation-form/modify-creation-form.actions'
 
 import { Creation, State, initialState, PrimaryComment } from './creation';
 import { SILLY_ANIMATION_VIDEOS } from './silly_animation_videos';
@@ -104,6 +105,25 @@ function addReplyHandler(state, props) {
       return creation
     }
   })}
+}
+
+function modifyCreation(state, props) {
+  // Addition of new creation
+  if (props['creationId'] == null) {
+    var creationId : Number = Math.floor(Math.random() * 1000000000)
+    var newCreation = {
+      id : creationId,
+      creator_id : props['creatorId'],
+      title : props['title'],
+      description : props['description'],
+      youtube_id : props['youtubeId'],
+      category : props['category'],
+      comments : []
+    }
+    return {creations: [...state.creations, newCreation]}
+  }
+  // Modification not yet supported
+  console.log('modifyCreation called with id ' + props['creationId'] + ' but creation modification is unsupported')
 }
 
 

@@ -6,6 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./create-creation-modal.component.css']
 })
 export class CreateCreationModalComponent implements OnInit {
+  @Input() creatorId : Number
+  
   constructor() { }
 
   ngOnInit() {

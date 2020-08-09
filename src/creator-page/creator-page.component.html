@@ -17,7 +17,8 @@
   <app-netflix-feed 
     [key]="(creator | async).id"
     [mode]="modes.BY_CREATOR"
+    [carouselID]="10"
     [isCreatable]=true>
   </app-netflix-feed>  
 </div>
-<app-create-creation-modal></app-create-creation-modal>
+<app-create-creation-modal [creatorId]="(creator | async).id"></app-create-creation-modal>
