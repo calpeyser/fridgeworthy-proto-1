@@ -1,5 +1,18 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/add-creation-thumbnail/add-creation-thumbnail.component.html":
+/*!****************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/add-creation-thumbnail/add-creation-thumbnail.component.html ***!
+  \****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n    <a data-toggle=\"modal\" href=\"#createCreationModal\">\r\n        <svg width=\"\" height=\"\" viewBox=\"0 0 16 16\" class=\"bi bi-cloud-upload\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">\r\n            <path fill-rule=\"evenodd\" d=\"M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z\"/>\r\n            <path fill-rule=\"evenodd\" d=\"M7.646 4.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V14.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3z\"/>\r\n        </svg>\r\n        <div class=\"overlay\">\r\n            <div class=\"overlay_text\">\r\n                Upload Creation\r\n            </div>\r\n        </div>\r\n    </a>\r\n</div>\r\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html":
 /*!**************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html ***!
@@ -52,6 +65,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/create-creation-modal/create-creation-modal.component.html":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/create-creation-modal/create-creation-modal.component.html ***!
+  \**************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal fade\" id=\"createCreationModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalCenterTitle\" aria-hidden=\"true\">\r\n    <div class=\"modal-dialog modal-dialog-centered modal-xl\" role=\"document\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <h3 class=\"modal-title\" id=\"exampleModalLongTitle\">Add a New Creation</h3>\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <app-modify-creation-form [creatorId]=\"creatorId\"></app-modify-creation-form>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  ");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/creation-page/creation-page.component.html":
 /*!**********************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/creation-page/creation-page.component.html ***!
@@ -61,7 +87,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<br>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-2\"></div>\r\n    <div class=\"col-8\">\r\n      <div class=\"jumbotron\" style=\"height: 500pt\">\r\n        <iframe width=\"100%\" height=\"100%\" [src]=\"creationUrl | async\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n      </div>\r\n\r\n    <h2 style=\"text-align: center\">{{(creation | async).title}}</h2>\r\n    <h3 style=\"text-align: center\"><a [routerLink]=\"['/creator', (creation | async).creator]\">{{(creation | async).creator}}</a></h3>\r\n    <br>\r\n    <p>{{(creation | async).description}}</p>\r\n    </div>\r\n    <div class=\"col-2\"></div>\r\n</div>\r\n<app-comment-section [creationId]=\"id\" [creation]=\"creation\"></app-comment-section>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<br>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-2\"></div>\r\n    <div class=\"col-8\">\r\n      <div class=\"jumbotron\" style=\"height: 500pt\">\r\n        <iframe width=\"100%\" height=\"100%\" [src]=\"creationUrl | async\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n      </div>\r\n\r\n    <h2 style=\"text-align: center\">{{(creation | async).title}}</h2>\r\n    <h3 style=\"text-align: center\"><a [routerLink]=\"['/creator', (creator | async).id]\">{{(creator | async).name}}</a></h3>\r\n    <br>\r\n    <p>{{(creation | async).description}}</p>\r\n    </div>\r\n    <div class=\"col-2\"></div>\r\n</div>\r\n<app-comment-section [creationId]=\"id\" [creation]=\"creation\"></app-comment-section>\r\n");
 
 /***/ }),
 
@@ -74,7 +100,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n  <a [routerLink]=\"['/creation', creation.id]\">\r\n      <img [src]=\"thumbnailUrl\" class=\"img-fluid\">\r\n      <div class=\"overlay\">\r\n        <div class=\"overlay_text\">\r\n          <h1>{{creation.title}}</h1>\r\n          <h2>{{creation.creator}}</h2>\r\n        </div>\r\n      </div>\r\n  </a>\r\n</div>\r\n\r\n<!--\r\n<div class=\"card\" style=\"width: 18rem;\">\r\n  <div class=\"card-body\">\r\n    <a [routerLink]=\"['/creation', creation.youtube_id]\">\r\n      <img [src]=\"thumbnailUrl\" class=\"img-fluid\">\r\n    </a>\r\n    <h5 class=\"card-title\">{{ creation.title }}</h5>\r\n    <p class=\"card-text\">{{ creation.creator }}</p>\r\n  </div>\r\n</div>\r\n-->");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n  <a [routerLink]=\"['/creation', creation.id]\">\r\n      <img [src]=\"thumbnailUrl\" class=\"img-fluid\">\r\n      <div class=\"overlay\">\r\n        <div class=\"overlay_text\">\r\n          <h1>{{creation.title}}</h1>\r\n        </div>\r\n      </div>\r\n  </a>\r\n</div>\r\n\r\n<!--\r\n<div class=\"card\" style=\"width: 18rem;\">\r\n  <div class=\"card-body\">\r\n    <a [routerLink]=\"['/creation', creation.youtube_id]\">\r\n      <img [src]=\"thumbnailUrl\" class=\"img-fluid\">\r\n    </a>\r\n    <h5 class=\"card-title\">{{ creation.title }}</h5>\r\n    <p class=\"card-text\">{{ creation.creator }}</p>\r\n  </div>\r\n</div>\r\n-->");
 
 /***/ }),
 
@@ -100,7 +126,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-fluid\">\r\n  <br>\r\n  <div class=\"card text-center\" style=\"width: 80rem;\">\r\n    <div class=\"row no-gutters\">\r\n      <div class=\"col-md-4\">\r\n        <img [src]=\"(creator | async).img_path\" class=\"card-img\" alt=\"...\">\r\n      </div>\r\n      <div class=\"col-md-8\">\r\n        <div class=\"card-body\">\r\n          <h5 class=\"card-title\">{{(creator | async).name}}</h5>\r\n          <p class=\"card-text\">{{(creator | async).bio}}</p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <app-feed [key]=\"(creator | async).name\" [mode]=\"modes.BY_CREATOR\"></app-feed>  \r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-fluid\">\r\n  <br>\r\n  <div class=\"card text-center\" style=\"width: 80rem;\">\r\n    <div class=\"row no-gutters\">\r\n      <div class=\"col-md-4\">\r\n        <img [src]=\"(creator | async).img_path\" class=\"card-img\" alt=\"...\">\r\n      </div>\r\n      <div class=\"col-md-8\">\r\n        <div class=\"card-body\">\r\n          <h5 class=\"card-title\">{{(creator | async).name}}</h5>\r\n          <p class=\"card-text\">{{(creator | async).bio}}</p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <br>\r\n  <app-netflix-feed \r\n    [key]=\"(creator | async).id\"\r\n    [mode]=\"modes.BY_CREATOR\"\r\n    [carouselID]=\"10\"\r\n    [isCreatable]=true>\r\n  </app-netflix-feed>  \r\n</div>\r\n<app-create-creation-modal [creatorId]=\"(creator | async).id\"></app-create-creation-modal>");
 
 /***/ }),
 
@@ -126,7 +152,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <h2>Category 1</h2>\r\n  <br>\r\n  <app-netflix-feed\r\n    [key]=\"category\"\r\n    [category]=\"'Category 1'\" \r\n    [carouselID]=1\r\n    [mode]=\"modes.BY_CATEGORY\">\r\n  </app-netflix-feed>\r\n  <br>\r\n\r\n  <h2>Category 2</h2>\r\n  <br>\r\n  <app-netflix-feed\r\n    [key]=\"category\"\r\n    [category]=\"'Category 2'\"\r\n    [carouselID]=2\r\n    [mode]=\"modes.BY_CATEGORY\">\r\n  </app-netflix-feed>\r\n  <br>\r\n\r\n  <h2>Category 3</h2>\r\n  <br>\r\n  <app-netflix-feed\r\n    [key]=\"category\"\r\n    [category]=\"'Category 3'\"\r\n    [carouselID]=3\r\n    [mode]=\"modes.BY_CATEGORY\">\r\n  </app-netflix-feed>\r\n  <br>\r\n\r\n  <h2>Category 4</h2>\r\n  <br>\r\n  <app-netflix-feed\r\n    [key]=\"category\"\r\n    [category]=\"'Category 4'\"\r\n    [carouselID]=4\r\n    [mode]=\"modes.BY_CATEGORY\">\r\n  </app-netflix-feed>\r\n  <br>\r\n\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container overflow-auto\">\r\n  <div *ngFor=\"let category of categories.values(); let i = index\">\r\n    <h2>{{category.valueOf()}}</h2>\r\n    <br>\r\n    <app-netflix-feed\r\n      [key]=\"category.valueOf()\"\r\n      [carouselID]=\"i+1\"\r\n      [mode]=\"modes.BY_CATEGORY\">\r\n    </app-netflix-feed>\r\n    <br>\r\n  </div>\r\n</div>");
 
 /***/ }),
 
@@ -156,6 +182,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/modify-creation-form/modify-creation-form.component.html":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/modify-creation-form/modify-creation-form.component.html ***!
+  \************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"creationForm\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"form-group\">\r\n      <label for=\"viewerInputCreationTitle\">Creation Title</label>\r\n      <input type=\"text\" class=\"form-control\" id=\"viewerInputCreationTitle\" placeholder=\"\" formControlName=\"title\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"viewerInputYoutubeLink\">Youtube Link</label>\r\n      <input type=\"text\" class=\"form-control\" id=\"viewerInputYoutubeLink\" placeholder=\"\" formControlName=\"youtubeLink\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"viewerInputCategory\">Category</label>\r\n      <select class=\"custom-select\" formControlName=\"category\">\r\n        <option *ngFor=\"let category of categories.values()\" [ngValue]=\"category\">{{category}}</option>\r\n     </select>  \r\n    </div>\r\n    \r\n    <div class=\"form-group\">\r\n        <label for=\"viewerInputDescription\">Description</label>\r\n        <textarea class=\"form-control\" id=\"viewerInputDescription\" placeholder=\"\" formControlName=\"description\"></textarea>\r\n      </div>\r\n  <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\r\n  </form>");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/navbar/navbar.component.html":
 /*!********************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/navbar/navbar.component.html ***!
@@ -178,7 +217,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div id=\"carousel_{{carouselID}}\" class=\"carousel slide\" data-ride=\"carousel\">\r\n  <div class=\"carousel-inner\">\r\n    <div class=\"container\">\r\n      <div\r\n        class=\"{{i == 0 ? 'carousel-item active' : 'carousel-item'}}\"\r\n        *ngFor=\"let creationSection of (getSectionsWithKey(category) | async); let i = index\">\r\n        <div class=\"row\">\r\n          <app-creation-thumbnail\r\n            class=\"col-3\"\r\n            [creation]=\"creation\"\r\n            *ngFor=\"let creation of creationSection.creations\">\r\n          </app-creation-thumbnail>\r\n        </div>\r\n    </div>\r\n  </div>\r\n  <a class=\"carousel-control-prev\" href=\"#carousel_{{carouselID}}\" role=\"button\" data-slide=\"prev\">\r\n    <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Previous</span>\r\n  </a>\r\n  <a class=\"carousel-control-next\" href=\"#carousel_{{carouselID}}\" role=\"button\" data-slide=\"next\">\r\n    <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Next</span>\r\n  </a>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div id=\"carousel_{{carouselID}}\" class=\"carousel slide\" data-ride=\"carousel\">\r\n  <div class=\"carousel-inner\">\r\n    <div class=\"container\">\r\n      <div\r\n        class=\"{{i == 0 ? 'carousel-item active' : 'carousel-item'}}\"\r\n        *ngFor=\"let creationSection of (getSectionsWithKey(key) | async); let i = index\">\r\n        <div class=\"row\">\r\n          <app-add-creation-thumbnail\r\n            class=\"col-3\"\r\n            *ngIf=\"isCreatable && i==0\">\r\n          </app-add-creation-thumbnail>\r\n          <app-creation-thumbnail\r\n            class=\"col-3\"\r\n            [creation]=\"creation\"\r\n            *ngFor=\"let creation of creationSection.creations\">\r\n          </app-creation-thumbnail>\r\n        </div>\r\n    </div>\r\n  </div>\r\n  <a class=\"carousel-control-prev\" href=\"#carousel_{{carouselID}}\" role=\"button\" data-slide=\"prev\">\r\n    <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Previous</span>\r\n  </a>\r\n  <a class=\"carousel-control-next\" href=\"#carousel_{{carouselID}}\" role=\"button\" data-slide=\"next\">\r\n    <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Next</span>\r\n  </a>\r\n</div>");
 
 /***/ }),
 
@@ -4305,6 +4344,60 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/add-creation-thumbnail/add-creation-thumbnail.component.css":
+/*!*************************************************************************!*\
+  !*** ./src/add-creation-thumbnail/add-creation-thumbnail.component.css ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("h1 {\r\n    text-align: center;\r\n    font-size: 0.75vw;\r\n  }\r\n  \r\n  h2 {\r\n    text-align: center;\r\n    font-size: 0.50vw;\r\n  }\r\n  \r\n  img {\r\n    height: 200px;\r\n  }\r\n  \r\n  .container {\r\n    position: relative;\r\n    color: black;\r\n    padding-top: 0px;\r\n    padding-right: 0px;\r\n    padding-bottom: 0px;\r\n    padding-left: 0px;\r\n  }\r\n  \r\n  .overlay {\r\n    position: absolute;\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    opacity: 0;\r\n    transition: .5s ease;\r\n    background-color: black;\r\n  }\r\n  \r\n  .container:hover .overlay {\r\n    opacity: 0.75;\r\n  }\r\n  \r\n  .overlay_text {\r\n    color: white;\r\n    font-size: 20px;\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\r\n    -ms-transform: translate(-50%, -50%);\r\n  }\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hZGQtY3JlYXRpb24tdGh1bWJuYWlsL2FkZC1jcmVhdGlvbi10aHVtYm5haWwuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtJQUNsQixpQkFBaUI7RUFDbkI7O0VBRUE7SUFDRSxrQkFBa0I7SUFDbEIsaUJBQWlCO0VBQ25COztFQUVBO0lBQ0UsYUFBYTtFQUNmOztFQUVBO0lBQ0Usa0JBQWtCO0lBQ2xCLFlBQVk7SUFDWixnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLG1CQUFtQjtJQUNuQixpQkFBaUI7RUFDbkI7O0VBRUE7SUFDRSxrQkFBa0I7SUFDbEIsTUFBTTtJQUNOLFNBQVM7SUFDVCxPQUFPO0lBQ1AsUUFBUTtJQUNSLFVBQVU7SUFDVixvQkFBb0I7SUFDcEIsdUJBQXVCO0VBQ3pCOztFQUVBO0lBQ0UsYUFBYTtFQUNmOztFQUVBO0lBQ0UsWUFBWTtJQUNaLGVBQWU7SUFDZixrQkFBa0I7SUFDbEIsUUFBUTtJQUNSLFNBQVM7SUFDVCxnQ0FBZ0M7SUFDaEMsb0NBQW9DO0VBQ3RDIiwiZmlsZSI6InNyYy9hZGQtY3JlYXRpb24tdGh1bWJuYWlsL2FkZC1jcmVhdGlvbi10aHVtYm5haWwuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImgxIHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGZvbnQtc2l6ZTogMC43NXZ3O1xyXG4gIH1cclxuICBcclxuICBoMiB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBmb250LXNpemU6IDAuNTB2dztcclxuICB9XHJcbiAgXHJcbiAgaW1nIHtcclxuICAgIGhlaWdodDogMjAwcHg7XHJcbiAgfVxyXG4gIFxyXG4gIC5jb250YWluZXIge1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgY29sb3I6IGJsYWNrO1xyXG4gICAgcGFkZGluZy10b3A6IDBweDtcclxuICAgIHBhZGRpbmctcmlnaHQ6IDBweDtcclxuICAgIHBhZGRpbmctYm90dG9tOiAwcHg7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDBweDtcclxuICB9XHJcbiAgXHJcbiAgLm92ZXJsYXkge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdG9wOiAwO1xyXG4gICAgYm90dG9tOiAwO1xyXG4gICAgbGVmdDogMDtcclxuICAgIHJpZ2h0OiAwO1xyXG4gICAgb3BhY2l0eTogMDtcclxuICAgIHRyYW5zaXRpb246IC41cyBlYXNlO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbiAgfVxyXG4gIFxyXG4gIC5jb250YWluZXI6aG92ZXIgLm92ZXJsYXkge1xyXG4gICAgb3BhY2l0eTogMC43NTtcclxuICB9XHJcbiAgXHJcbiAgLm92ZXJsYXlfdGV4dCB7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBmb250LXNpemU6IDIwcHg7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDUwJTtcclxuICAgIGxlZnQ6IDUwJTtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG4gICAgLW1zLXRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG4gIH1cclxuICAiXX0= */");
+
+/***/ }),
+
+/***/ "./src/add-creation-thumbnail/add-creation-thumbnail.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/add-creation-thumbnail/add-creation-thumbnail.component.ts ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+exports.__esModule = true;
+exports.AddCreationThumbnailComponent = void 0;
+var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+var AddCreationThumbnailComponent = /** @class */ (function () {
+    function AddCreationThumbnailComponent() {
+    }
+    AddCreationThumbnailComponent.prototype.ngOnInit = function () {
+    };
+    AddCreationThumbnailComponent.ctorParameters = function () { return []; };
+    AddCreationThumbnailComponent = __decorate([
+        core_1.Component({
+            selector: 'app-add-creation-thumbnail',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./add-creation-thumbnail.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/add-creation-thumbnail/add-creation-thumbnail.component.html"))["default"],
+            styles: [__importDefault(__webpack_require__(/*! ./add-creation-thumbnail.component.css */ "./src/add-creation-thumbnail/add-creation-thumbnail.component.css"))["default"]]
+        })
+    ], AddCreationThumbnailComponent);
+    return AddCreationThumbnailComponent;
+}());
+exports.AddCreationThumbnailComponent = AddCreationThumbnailComponent;
+
+
+/***/ }),
+
 /***/ "./src/app/app-routing.module.ts":
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
@@ -4330,7 +4423,7 @@ var creator_page_component_1 = __webpack_require__(/*! ../creator-page/creator-p
 var routes = [
     { path: '', component: landing_page_component_1.LandingPageComponent },
     { path: 'creation/:id', component: creation_page_component_1.CreationPageComponent },
-    { path: 'creator/:name', component: creator_page_component_1.CreatorPageComponent }
+    { path: 'creator/:id', component: creator_page_component_1.CreatorPageComponent }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -4448,6 +4541,7 @@ var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ ".
 var forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 var store_1 = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js");
 var creationReducer = __webpack_require__(/*! ../creation/creation.reducer */ "./src/creation/creation.reducer.ts");
+var creatorReducer = __webpack_require__(/*! ../creator/creator.reducer */ "./src/creator/creator.reducer.ts");
 var app_component_1 = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 var app_routing_module_1 = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 var hello_component_1 = __webpack_require__(/*! ./hello.component */ "./src/app/hello.component.ts");
@@ -4468,6 +4562,9 @@ var comment_section_component_1 = __webpack_require__(/*! ../comment-section/com
 var primary_comment_component_1 = __webpack_require__(/*! ../primary-comment/primary-comment.component */ "./src/primary-comment/primary-comment.component.ts");
 var comment_box_component_1 = __webpack_require__(/*! ../comment-box/comment-box.component */ "./src/comment-box/comment-box.component.ts");
 var secondary_comment_component_1 = __webpack_require__(/*! ../secondary-comment/secondary-comment.component */ "./src/secondary-comment/secondary-comment.component.ts");
+var add_creation_thumbnail_component_1 = __webpack_require__(/*! ../add-creation-thumbnail/add-creation-thumbnail.component */ "./src/add-creation-thumbnail/add-creation-thumbnail.component.ts");
+var create_creation_modal_component_1 = __webpack_require__(/*! ../create-creation-modal/create-creation-modal.component */ "./src/create-creation-modal/create-creation-modal.component.ts");
+var modify_creation_form_component_1 = __webpack_require__(/*! ../modify-creation-form/modify-creation-form.component */ "./src/modify-creation-form/modify-creation-form.component.ts");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -4478,7 +4575,10 @@ var AppModule = /** @class */ (function () {
                 forms_1.FormsModule,
                 forms_1.ReactiveFormsModule,
                 app_routing_module_1.AppRoutingModule,
-                store_1.StoreModule.forRoot({ creation: creationReducer.reducer })
+                store_1.StoreModule.forRoot({
+                    creation: creationReducer.reducer,
+                    creator: creatorReducer.reducer
+                }),
             ],
             declarations: [
                 app_component_1.AppComponent,
@@ -4500,6 +4600,9 @@ var AppModule = /** @class */ (function () {
                 primary_comment_component_1.PrimaryCommentComponent,
                 comment_box_component_1.CommentBoxComponent,
                 secondary_comment_component_1.SecondaryCommentComponent,
+                add_creation_thumbnail_component_1.AddCreationThumbnailComponent,
+                create_creation_modal_component_1.CreateCreationModalComponent,
+                modify_creation_form_component_1.ModifyCreationFormComponent,
             ],
             bootstrap: [app_component_1.AppComponent]
         })
@@ -4619,6 +4722,24 @@ exports.CommentBoxComponent = CommentBoxComponent;
 
 /***/ }),
 
+/***/ "./src/comment-section/comment-section.actions.ts":
+/*!********************************************************!*\
+  !*** ./src/comment-section/comment-section.actions.ts ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+exports.__esModule = true;
+exports.add_primary_comment = exports.add_dummy_comments = void 0;
+var store_1 = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js");
+exports.add_dummy_comments = store_1.createAction('[Comment Section] add dummy comments', store_1.props());
+exports.add_primary_comment = store_1.createAction('[Comment Section] add primary comment', store_1.props());
+
+
+/***/ }),
+
 /***/ "./src/comment-section/comment-section.component.css":
 /*!***********************************************************!*\
   !*** ./src/comment-section/comment-section.component.css ***!
@@ -4653,25 +4774,31 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 exports.__esModule = true;
 exports.CommentSectionComponent = void 0;
 var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-var creation_service_1 = __webpack_require__(/*! ../creation/creation.service */ "./src/creation/creation.service.ts");
+var store_1 = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js");
+var ComponentActions = __webpack_require__(/*! ./comment-section.actions */ "./src/comment-section/comment-section.actions.ts");
 var CommentSectionComponent = /** @class */ (function () {
-    function CommentSectionComponent(creationService) {
-        this.creationService = creationService;
+    function CommentSectionComponent(store) {
+        this.store = store;
     }
     CommentSectionComponent.prototype.ngOnInit = function () {
     };
     CommentSectionComponent.prototype.addDummyComments = function () {
-        this.creationService.addDummyComments(this.creationId);
+        this.store.dispatch(ComponentActions.add_dummy_comments({
+            'creationId': this.creationId
+        }));
     };
     CommentSectionComponent.prototype.commentIsSubmitted = function (event) {
         var submittedComment = {
             comment: event,
             replies: []
         };
-        this.creationService.addPrimaryCommentToCreation(this.creationId, submittedComment);
+        this.store.dispatch(ComponentActions.add_primary_comment({
+            'creationId': this.creationId,
+            'comment': submittedComment
+        }));
     };
     CommentSectionComponent.ctorParameters = function () { return [
-        { type: creation_service_1.CreationService }
+        { type: store_1.Store }
     ]; };
     CommentSectionComponent.propDecorators = {
         creationId: [{ type: core_1.Input }],
@@ -4760,6 +4887,63 @@ exports.ConnectJoinComponent = ConnectJoinComponent;
 
 /***/ }),
 
+/***/ "./src/create-creation-modal/create-creation-modal.component.css":
+/*!***********************************************************************!*\
+  !*** ./src/create-creation-modal/create-creation-modal.component.css ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvY3JlYXRlLWNyZWF0aW9uLW1vZGFsL2NyZWF0ZS1jcmVhdGlvbi1tb2RhbC5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/create-creation-modal/create-creation-modal.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/create-creation-modal/create-creation-modal.component.ts ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+exports.__esModule = true;
+exports.CreateCreationModalComponent = void 0;
+var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+var CreateCreationModalComponent = /** @class */ (function () {
+    function CreateCreationModalComponent() {
+    }
+    CreateCreationModalComponent.prototype.ngOnInit = function () {
+    };
+    CreateCreationModalComponent.ctorParameters = function () { return []; };
+    CreateCreationModalComponent.propDecorators = {
+        creatorId: [{ type: core_1.Input }]
+    };
+    CreateCreationModalComponent = __decorate([
+        core_1.Component({
+            selector: 'app-create-creation-modal',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./create-creation-modal.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/create-creation-modal/create-creation-modal.component.html"))["default"],
+            styles: [__importDefault(__webpack_require__(/*! ./create-creation-modal.component.css */ "./src/create-creation-modal/create-creation-modal.component.css"))["default"]]
+        })
+    ], CreateCreationModalComponent);
+    return CreateCreationModalComponent;
+}());
+exports.CreateCreationModalComponent = CreateCreationModalComponent;
+
+
+/***/ }),
+
 /***/ "./src/creation-page/creation-page.component.css":
 /*!*******************************************************!*\
   !*** ./src/creation-page/creation-page.component.css ***!
@@ -4797,24 +4981,29 @@ var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/c
 var router_1 = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 var operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
-var creation_service_1 = __webpack_require__(/*! ../creation/creation.service */ "./src/creation/creation.service.ts");
+var store_1 = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js");
+var CreationSelectors = __webpack_require__(/*! ../creation/creation.selector */ "./src/creation/creation.selector.ts");
+var CreatorSelectors = __webpack_require__(/*! ../creator/creator.selector */ "./src/creator/creator.selector.ts");
 var CreationPageComponent = /** @class */ (function () {
-    function CreationPageComponent(creationService, route, sanitizer) {
-        this.creationService = creationService;
+    function CreationPageComponent(store, route, sanitizer) {
+        this.store = store;
         this.route = route;
         this.sanitizer = sanitizer;
     }
     CreationPageComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.paramMap.subscribe(function (params) {
-            _this.id = params.get('id');
-            _this.creation = _this.creationService.getCreationByID(_this.id);
+            _this.id = Number(params.get('id'));
+            _this.creation = _this.store.pipe(store_1.select(CreationSelectors.selectCreationById, { creationId: _this.id }));
+            _this.creator = _this.creation.pipe(operators_1.flatMap(function (cr) {
+                return _this.store.pipe(store_1.select(CreatorSelectors.selectCreationById, { creatorId: cr.creator_id }));
+            }));
             _this.creationUrl = _this.creation
                 .pipe(operators_1.map(function (c) { return _this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/" + c.youtube_id); }));
         });
     };
     CreationPageComponent.ctorParameters = function () { return [
-        { type: creation_service_1.CreationService },
+        { type: store_1.Store },
         { type: router_1.ActivatedRoute },
         { type: platform_browser_1.DomSanitizer }
     ]; };
@@ -4841,7 +5030,7 @@ exports.CreationPageComponent = CreationPageComponent;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("h1 {\r\n  text-align: center;\r\n  font-size: 0.75vw;\r\n}\r\n\r\nh2 {\r\n  text-align: center;\r\n  font-size: 0.50vw;\r\n}\r\n\r\nimg {\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\n.container {\r\n  position: relative;\r\n  color: black;\r\n  padding-top: 0px;\r\n  padding-right: 0px;\r\n  padding-bottom: 0px;\r\n  padding-left: 0px;\r\n}\r\n\r\n.overlay {\r\n  position: absolute;\r\n  top: 0;\r\n  bottom: 0;\r\n  left: 0;\r\n  right: 0;\r\n  opacity: 0;\r\n  transition: .5s ease;\r\n  background-color: black;\r\n}\r\n\r\n.container:hover .overlay {\r\n  opacity: 0.75;\r\n}\r\n\r\n.overlay_text {\r\n  color: white;\r\n  font-size: 20px;\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%);\r\n  -ms-transform: translate(-50%, -50%);\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9jcmVhdGlvbi10aHVtYm5haWwvY3JlYXRpb24tdGh1bWJuYWlsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBa0I7RUFDbEIsaUJBQWlCO0FBQ25COztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLGdCQUFnQjtFQUNoQixrQkFBa0I7RUFDbEIsbUJBQW1CO0VBQ25CLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixNQUFNO0VBQ04sU0FBUztFQUNULE9BQU87RUFDUCxRQUFRO0VBQ1IsVUFBVTtFQUNWLG9CQUFvQjtFQUNwQix1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSxhQUFhO0FBQ2Y7O0FBRUE7RUFDRSxZQUFZO0VBQ1osZUFBZTtFQUNmLGtCQUFrQjtFQUNsQixRQUFRO0VBQ1IsU0FBUztFQUNULGdDQUFnQztFQUNoQyxvQ0FBb0M7QUFDdEMiLCJmaWxlIjoic3JjL2NyZWF0aW9uLXRodW1ibmFpbC9jcmVhdGlvbi10aHVtYm5haWwuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImgxIHtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgZm9udC1zaXplOiAwLjc1dnc7XHJcbn1cclxuXHJcbmgyIHtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgZm9udC1zaXplOiAwLjUwdnc7XHJcbn1cclxuXHJcbmltZyB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG59XHJcblxyXG4uY29udGFpbmVyIHtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgY29sb3I6IGJsYWNrO1xyXG4gIHBhZGRpbmctdG9wOiAwcHg7XHJcbiAgcGFkZGluZy1yaWdodDogMHB4O1xyXG4gIHBhZGRpbmctYm90dG9tOiAwcHg7XHJcbiAgcGFkZGluZy1sZWZ0OiAwcHg7XHJcbn1cclxuXHJcbi5vdmVybGF5IHtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgdG9wOiAwO1xyXG4gIGJvdHRvbTogMDtcclxuICBsZWZ0OiAwO1xyXG4gIHJpZ2h0OiAwO1xyXG4gIG9wYWNpdHk6IDA7XHJcbiAgdHJhbnNpdGlvbjogLjVzIGVhc2U7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbn1cclxuXHJcbi5jb250YWluZXI6aG92ZXIgLm92ZXJsYXkge1xyXG4gIG9wYWNpdHk6IDAuNzU7XHJcbn1cclxuXHJcbi5vdmVybGF5X3RleHQge1xyXG4gIGNvbG9yOiB3aGl0ZTtcclxuICBmb250LXNpemU6IDIwcHg7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHRvcDogNTAlO1xyXG4gIGxlZnQ6IDUwJTtcclxuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcclxuICAtbXMtdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XHJcbn1cclxuIl19 */");
+/* harmony default export */ __webpack_exports__["default"] = ("h1 {\r\n  text-align: center;\r\n  font-size: 0.75vw;\r\n}\r\n\r\nh2 {\r\n  text-align: center;\r\n  font-size: 0.50vw;\r\n}\r\n\r\nimg {\r\n  height: 200px;\r\n}\r\n\r\n.container {\r\n  position: relative;\r\n  color: black;\r\n  padding-top: 0px;\r\n  padding-right: 0px;\r\n  padding-bottom: 0px;\r\n  padding-left: 0px;\r\n}\r\n\r\n.overlay {\r\n  position: absolute;\r\n  top: 0;\r\n  bottom: 0;\r\n  left: 0;\r\n  right: 0;\r\n  opacity: 0;\r\n  transition: .5s ease;\r\n  background-color: black;\r\n}\r\n\r\n.container:hover .overlay {\r\n  opacity: 0.75;\r\n}\r\n\r\n.overlay_text {\r\n  color: white;\r\n  font-size: 20px;\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%);\r\n  -ms-transform: translate(-50%, -50%);\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9jcmVhdGlvbi10aHVtYm5haWwvY3JlYXRpb24tdGh1bWJuYWlsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBa0I7RUFDbEIsaUJBQWlCO0FBQ25COztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixZQUFZO0VBQ1osZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixtQkFBbUI7RUFDbkIsaUJBQWlCO0FBQ25COztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLE1BQU07RUFDTixTQUFTO0VBQ1QsT0FBTztFQUNQLFFBQVE7RUFDUixVQUFVO0VBQ1Ysb0JBQW9CO0VBQ3BCLHVCQUF1QjtBQUN6Qjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLFlBQVk7RUFDWixlQUFlO0VBQ2Ysa0JBQWtCO0VBQ2xCLFFBQVE7RUFDUixTQUFTO0VBQ1QsZ0NBQWdDO0VBQ2hDLG9DQUFvQztBQUN0QyIsImZpbGUiOiJzcmMvY3JlYXRpb24tdGh1bWJuYWlsL2NyZWF0aW9uLXRodW1ibmFpbC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaDEge1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBmb250LXNpemU6IDAuNzV2dztcclxufVxyXG5cclxuaDIge1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBmb250LXNpemU6IDAuNTB2dztcclxufVxyXG5cclxuaW1nIHtcclxuICBoZWlnaHQ6IDIwMHB4O1xyXG59XHJcblxyXG4uY29udGFpbmVyIHtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgY29sb3I6IGJsYWNrO1xyXG4gIHBhZGRpbmctdG9wOiAwcHg7XHJcbiAgcGFkZGluZy1yaWdodDogMHB4O1xyXG4gIHBhZGRpbmctYm90dG9tOiAwcHg7XHJcbiAgcGFkZGluZy1sZWZ0OiAwcHg7XHJcbn1cclxuXHJcbi5vdmVybGF5IHtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgdG9wOiAwO1xyXG4gIGJvdHRvbTogMDtcclxuICBsZWZ0OiAwO1xyXG4gIHJpZ2h0OiAwO1xyXG4gIG9wYWNpdHk6IDA7XHJcbiAgdHJhbnNpdGlvbjogLjVzIGVhc2U7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbn1cclxuXHJcbi5jb250YWluZXI6aG92ZXIgLm92ZXJsYXkge1xyXG4gIG9wYWNpdHk6IDAuNzU7XHJcbn1cclxuXHJcbi5vdmVybGF5X3RleHQge1xyXG4gIGNvbG9yOiB3aGl0ZTtcclxuICBmb250LXNpemU6IDIwcHg7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHRvcDogNTAlO1xyXG4gIGxlZnQ6IDUwJTtcclxuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcclxuICAtbXMtdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XHJcbn1cclxuIl19 */");
 
 /***/ }),
 
@@ -4903,13 +5092,143 @@ exports.CreationThumbnailComponent = CreationThumbnailComponent;
 
 "use strict";
 
+var __spreadArrays = (this && this.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
 exports.__esModule = true;
 exports.reducer = void 0;
 var store_1 = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js");
 var AppRootActions = __webpack_require__(/*! ../app/app.actions */ "./src/app/app.actions.ts");
+var CommentSectionActions = __webpack_require__(/*! ../comment-section/comment-section.actions */ "./src/comment-section/comment-section.actions.ts");
+var PrimaryCommentActions = __webpack_require__(/*! ../primary-comment/primary-comment.actions */ "./src/primary-comment/primary-comment.actions.ts");
+var ModifyCreationFormActions = __webpack_require__(/*! ../modify-creation-form/modify-creation-form.actions */ "./src/modify-creation-form/modify-creation-form.actions.ts");
 var creation_1 = __webpack_require__(/*! ./creation */ "./src/creation/creation.ts");
 var silly_animation_videos_1 = __webpack_require__(/*! ./silly_animation_videos */ "./src/creation/silly_animation_videos.ts");
-var appRootReducer = store_1.createReducer(creation_1.initialState, store_1.on(AppRootActions.initialize_state, function (state) { return ({ creations: silly_animation_videos_1.SILLY_ANIMATION_VIDEOS }); }));
+function addDummyCommentsHandler(state, props) {
+    var comment1 = {
+        comment: {
+            author: 'author1',
+            content: 'I think such and such'
+        },
+        replies: []
+    };
+    var comment2 = {
+        comment: {
+            author: 'author2',
+            content: 'oh yea? well that is crazy'
+        },
+        replies: [{
+                author: 'author3',
+                content: 'Yea, you\'re nuts'
+            }, {
+                author: 'author4',
+                content: 'Guys, give him a break.'
+            }]
+    };
+    var comment3 = {
+        comment: {
+            author: 'author1',
+            content: 'I still think such and such'
+        },
+        replies: []
+    };
+    var creations = state.creations;
+    return { creations: creations.map(function (creation) {
+            if (creation.id == props.creationId) {
+                var updated = {
+                    id: creation.id,
+                    title: creation.title,
+                    creator_id: creation.creator_id,
+                    youtube_id: creation.youtube_id,
+                    description: creation.description,
+                    category: creation.category,
+                    comments: [comment1, comment2, comment3]
+                };
+                return updated;
+            }
+            else {
+                return creation;
+            }
+        })
+    };
+}
+function addPrimaryCommentHandler(state, props) {
+    var creations = state.creations;
+    return { creations: creations.map(function (creation) {
+            if (creation.id == props.creationId) {
+                var updated = {
+                    id: creation.id,
+                    title: creation.title,
+                    creator_id: creation.creator_id,
+                    youtube_id: creation.youtube_id,
+                    description: creation.description,
+                    category: creation.category,
+                    comments: creation.comments.concat([props.comment])
+                };
+                return updated;
+            }
+            else {
+                return creation;
+            }
+        })
+    };
+}
+function addReplyHandler(state, props) {
+    var creations = state.creations;
+    return { creations: creations.map(function (creation) {
+            if (creation.id == props.creationId) {
+                var updatedComments = creation.comments.map(function (comment, index) {
+                    if (index == props.primaryCommentIndex) {
+                        var updatedComment = {
+                            comment: comment.comment,
+                            replies: comment.replies.concat([props.reply])
+                        };
+                        return updatedComment;
+                    }
+                    else {
+                        return comment;
+                    }
+                });
+                var updated = {
+                    id: creation.id,
+                    title: creation.title,
+                    creator_id: creation.creator_id,
+                    youtube_id: creation.youtube_id,
+                    description: creation.description,
+                    category: creation.category,
+                    comments: updatedComments
+                };
+                return updated;
+            }
+            else {
+                return creation;
+            }
+        }) };
+}
+function modifyCreationHandler(state, props) {
+    // Addition of new creation
+    if (props['creationId'] == null) {
+        var creationId = Math.floor(Math.random() * 1000000000);
+        var newCreation = {
+            id: creationId,
+            creator_id: props['creatorId'],
+            title: props['title'],
+            description: props['description'],
+            youtube_id: props['youtubeId'],
+            category: props['category'],
+            comments: []
+        };
+        console.log(newCreation);
+        return { creations: __spreadArrays(state.creations, [newCreation]) };
+    }
+    // Modification not yet supported
+    console.log('modifyCreation called with id ' + props['creationId'] + ' but creation modification is unsupported');
+}
+var appRootReducer = store_1.createReducer(creation_1.initialState, store_1.on(AppRootActions.initialize_state, function (state) { return ({ creations: silly_animation_videos_1.SILLY_ANIMATION_VIDEOS }); }), store_1.on(CommentSectionActions.add_dummy_comments, addDummyCommentsHandler), store_1.on(CommentSectionActions.add_primary_comment, addPrimaryCommentHandler), store_1.on(PrimaryCommentActions.add_reply, addReplyHandler), store_1.on(ModifyCreationFormActions.modify_creation, modifyCreationHandler));
 function reducer(state, action) {
     return appRootReducer(state, action);
 }
@@ -4928,14 +5247,14 @@ exports.reducer = reducer;
 "use strict";
 
 exports.__esModule = true;
-exports.selectCreationsByCreatorId = exports.selectCreationsByCategory = void 0;
+exports.selectCreationById = exports.selectCreationsByCreatorId = exports.selectCreationsByCategory = void 0;
 var store_1 = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js");
 function creationsFromAppState(state) {
-    return state.creations;
+    return state.creation.creations;
 }
 function creationsByCategoryFilter(creations, props) {
     var category = props.category;
-    if (category == null || category == '') {
+    if (category == null) {
         console.log('creationsByCategoryFilter called with no category');
         return [];
     }
@@ -4944,14 +5263,15 @@ function creationsByCategoryFilter(creations, props) {
         return [];
     }
     else {
-        return creations.filter(function (creation) { return creation.category == category; });
+        var res = creations.filter(function (creation) { return creation.category == category; });
+        return res;
     }
 }
 exports.selectCreationsByCategory = store_1.createSelector(creationsFromAppState, creationsByCategoryFilter);
 function creationsByCreatorId(creations, props) {
     var creatorId = props.creatorId;
     if (creatorId == null) {
-        console.log('creationsByCreatorId called with now creatorId');
+        console.log('creationsByCreatorId called with no creatorId');
         return [];
     }
     else if (creations == null) {
@@ -4963,115 +5283,30 @@ function creationsByCreatorId(creations, props) {
     }
 }
 exports.selectCreationsByCreatorId = store_1.createSelector(creationsFromAppState, creationsByCreatorId);
-
-
-/***/ }),
-
-/***/ "./src/creation/creation.service.ts":
-/*!******************************************!*\
-  !*** ./src/creation/creation.service.ts ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-exports.__esModule = true;
-exports.CreationService = void 0;
-var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-var rxjs_1 = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-var operators_1 = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-var silly_animation_videos_1 = __webpack_require__(/*! ./silly_animation_videos */ "./src/creation/silly_animation_videos.ts");
-var CreationService = /** @class */ (function () {
-    function CreationService() {
-        this.creationsSubject = new rxjs_1.BehaviorSubject(silly_animation_videos_1.SILLY_ANIMATION_VIDEOS);
-        this.creationsSubject.subscribe(function (v) {
-            console.log(v);
-        });
+function creationById(creations, props) {
+    var creationId = props.creationId;
+    if (creationId == null) {
+        console.log('creationById called with no creationId');
+        return null;
     }
-    CreationService.prototype.getCreationByID = function (id) {
-        var result = this.creationsSubject.pipe(operators_1.map(function (creations) {
-            return creations.filter(function (creation) {
-                return creation.id == id;
-            })[0];
-        }));
-        return result;
-    };
-    CreationService.prototype.addPrimaryCommentToCreation = function (id, newComment) {
-        var creations = this.creationsSubject.getValue();
-        var to_replace = creations.find(function (creation) {
-            return creation.id == id;
-        });
-        var index = creations.indexOf(to_replace);
-        to_replace.comments.push(newComment);
-        creations[index] = to_replace;
-        this.creationsSubject.next(creations);
-    };
-    CreationService.prototype.addReplyToPrimaryComment = function (creationId, primaryCommentIndex, newReply) {
-        var creations = this.creationsSubject.getValue();
-        var creation_to_modify = creations.find(function (creation) {
-            return creation.id == creationId;
-        });
-        creation_to_modify.comments[primaryCommentIndex].replies.push(newReply);
-        var creationIndex = creations.indexOf(creation_to_modify);
-        creations[creationIndex] = creation_to_modify;
-        this.creationsSubject.next(creations);
-    };
-    CreationService.prototype.addDummyComments = function (id) {
-        var creations = this.creationsSubject.getValue();
-        var to_replace = creations.find(function (creation) {
-            return creation.id = id;
-        });
-        var index = creations.indexOf(to_replace);
-        to_replace.comments = [];
-        var comment1 = {
-            comment: {
-                author: 'author1',
-                content: 'I think such and such'
-            },
-            replies: []
-        };
-        var comment2 = {
-            comment: {
-                author: 'author2',
-                content: 'oh yea? well that is crazy'
-            },
-            replies: [{
-                    author: 'author3',
-                    content: 'Yea, you\'re nuts'
-                }, {
-                    author: 'author4',
-                    content: 'Guys, give him a break.'
-                }]
-        };
-        var comment3 = {
-            comment: {
-                author: 'author1',
-                content: 'I still think such and such'
-            },
-            replies: []
-        };
-        to_replace.comments.push(comment1);
-        to_replace.comments.push(comment2);
-        to_replace.comments.push(comment3);
-        creations[index] = to_replace;
-        this.creationsSubject.next(creations);
-    };
-    CreationService.ctorParameters = function () { return []; };
-    CreationService = __decorate([
-        core_1.Injectable({
-            providedIn: 'root'
-        })
-    ], CreationService);
-    return CreationService;
-}());
-exports.CreationService = CreationService;
+    else if (creations == null) {
+        console.log('creationById called with null creations');
+        return null;
+    }
+    else {
+        var res = creations.filter(function (creation) { return creation.id == creationId; });
+        if (res.length == 0) {
+            console.log('No creation found with ID ' + creationId);
+            return null;
+        }
+        else if (res.length > 1) {
+            console.log('More than one creation found with ID ' + creationId);
+            return null;
+        }
+        return res[0];
+    }
+}
+exports.selectCreationById = store_1.createSelector(creationsFromAppState, creationById);
 
 
 /***/ }),
@@ -5086,7 +5321,29 @@ exports.CreationService = CreationService;
 "use strict";
 
 exports.__esModule = true;
-exports.initialState = void 0;
+exports.initialState = exports.Category = void 0;
+var Category;
+(function (Category) {
+    Category["JOYFUL"] = "Joyful";
+    Category["HORRIFYING"] = "Horrifying";
+    Category["FUNNY"] = "Funny";
+    Category["HEARTFELT"] = "Heartfelt";
+    Category["MISC"] = "Miscellaneous Awesomeness";
+    Category["EXCITING"] = "Exciting";
+})(Category = exports.Category || (exports.Category = {}));
+(function (Category) {
+    function values() {
+        return [
+            Category.JOYFUL,
+            Category.HORRIFYING,
+            Category.FUNNY,
+            Category.HEARTFELT,
+            Category.MISC,
+            Category.EXCITING
+        ];
+    }
+    Category.values = values;
+})(Category = exports.Category || (exports.Category = {}));
 exports.initialState = {
     creations: []
 };
@@ -5105,185 +5362,186 @@ exports.initialState = {
 
 exports.__esModule = true;
 exports.SILLY_ANIMATION_VIDEOS = void 0;
+var creation_1 = __webpack_require__(/*! ./creation */ "./src/creation/creation.ts");
 exports.SILLY_ANIMATION_VIDEOS = [
     {
-        id: "1",
+        id: 1,
         title: 'Funny videos : Funny Cartoons -  Try not to laugh or grin',
         creator_id: 4,
         youtube_id: 'sra_H9o7pjA',
         description: 'Funny videos : Funny Cartoons - Try not to laugh or grin .We update videos once a day for you to get your laughs! IKE, COMMENT ...',
-        category: 'Category 3',
+        category: creation_1.Category.JOYFUL,
         comments: []
     },
     {
-        id: "2",
+        id: 2,
         title: 'CRACKÉ - UPSET STOMACH | Funny Videos For Kids | Videos For Kids | WildBrain Cartoons',
         creator_id: 7,
         youtube_id: 'kdwRWC5yc20',
         description: 'Ed must save his eggs from inside a crocodile.SUBSCRIBE for more Cracké: http://bit.ly/2zcmQxbMore about Cracké: http ...',
-        category: 'Category 1',
+        category: creation_1.Category.JOYFUL,
         comments: []
     },
     {
-        id: "3",
+        id: 3,
         title: 'Three Little Pigs Cartoon | Silly Crocodile Fairy Tales & Bedtime Stories for Kids | 3 Little Pigs',
-        creator_id: 2,
+        creator_id: 7,
         youtube_id: 'WhlLUvWr7Ng',
         description: 'Three Little Pigs!  Three Little Pigs!  Here’s a silly crocodile cartoon about your fairy tale Three Little Pigs story! OK ...',
-        category: 'Category 2',
+        category: creation_1.Category.JOYFUL,
         comments: []
     },
     {
-        id: "4",
+        id: 4,
         title: 'Silly Symphony Lambert The Sheepish Lion',
-        creator_id: 8,
+        creator_id: 7,
         youtube_id: 'NCfaBjdh5V4',
         description: 'Subscribe My Channel for More & New Cartoon videos ▻▻ https://goo.gl/UgQckA You will find nice cartoon videos, Cartoon for ...',
-        category: 'Category 2',
+        category: creation_1.Category.JOYFUL,
         comments: []
     },
     {
-        id: "5",
+        id: 5,
         title: 'Animation Silly Symphony Flowers And Trees Disney Movies   Movies For Kids   Animation6',
-        creator_id: 0,
+        creator_id: 7,
         youtube_id: 'rH-OTZm0Xtk',
         description: 'Subscribe My Channel for More & New Cartoon videos ▻▻ https://goo.gl/LcZxEu You will find nice cartoon videos, Cartoon for ...',
-        category: 'Category 3',
+        category: creation_1.Category.JOYFUL,
         comments: []
     },
     {
-        id: "6",
+        id: 6,
         title: "WORLD'S MOST HILARIOUS FORTNITE ANIMATIONS!",
-        creator_id: 3,
+        creator_id: 7,
         youtube_id: '85n_e9XVZAM',
         description: "WORLD'S MOST HILARIOUS FORTNITE ANIMATIONS!Videos reacted to:Hybrid & the Sunny Steps | The Squad (Fortnite Animation ...",
-        category: 'Category 2',
+        category: creation_1.Category.JOYFUL,
         comments: []
     },
     {
-        id: "7",
+        id: 7,
         title: 'FNaF FUNNY Try Not To Laugh Challenge 2020',
         creator_id: 3,
         youtube_id: 'f5JZTvGFgV8',
         description: 'FNaF FUNNY Try Not To Laugh Challenge 2020Can you get to the end of the funny fnaf video WITHOUT laughing? Let me know now in ...',
-        category: 'Category 3',
+        category: creation_1.Category.JOYFUL,
         comments: []
     },
     {
-        id: "8",
+        id: 8,
         title: 'Funny CGI 3d Animated Short Film ** BIG CATCH ** Hilarious CGI Animation Kids Cartoon by Moles Merlo',
         creator_id: 2,
         youtube_id: 'Anw_bhEzsys',
         description: 'Enjoy this super funny Kids CGI 3d Animated short film THE BIG CATCH, by Imerges Studios and Moles Merlo. Featured at ...',
-        category: 'Category 1',
+        category: creation_1.Category.FUNNY,
         comments: []
     },
     {
-        id: "9",
+        id: 9,
         title: 'Cartoon Box Catch Up 14 | The BEST of Cartoon Box | Hilarious Cartoon Compilation | Marilyn Monroe',
         creator_id: 0,
         youtube_id: 'KXrrocvk2k4',
         description: 'SUBSCRIBE for weekly NEW Episodes! 👉 https://goo.gl/XnUgLFThis is a funny cartoon box compilation. The BEST Cartoon Box ...',
-        category: 'Category 2',
+        category: creation_1.Category.FUNNY,
         comments: []
     },
     {
-        id: "10",
+        id: 10,
         title: 'The Lion King  Silly Symphony Lambert | Disney Cartoon',
         creator_id: 9,
         youtube_id: 'VvY50vOIWl8',
         description: 'Watch The Lion King Silly Symphony Lambert | Disney Cartoon.',
-        category: 'Category 1',
+        category: creation_1.Category.FUNNY,
         comments: []
     },
     {
-        id: "11",
+        id: 11,
         title: 'Silly Symphony Flowers And Trees',
         creator_id: 9,
         youtube_id: 'gjnzlj5ihkY',
         description: 'Subscribe My Channel for More & New Cartoon videos ▻▻ https://goo.gl/UgQckA You will find nice cartoon videos, Cartoon for ...',
-        category: 'Category 1',
+        category: creation_1.Category.FUNNY,
         comments: []
     },
     {
-        id: "12",
+        id: 12,
         title: 'HILARIOUS ANIMATIONS To Watch When You WANT TO LAUGH!',
         creator_id: 1,
         youtube_id: 'QTiaaRz93c4',
         description: 'HILARIOUS ANIMATIONS To Watch When You WANT TO LAUGH!Welcome back to more hilarious animations! These hilarious animations ...',
-        category: 'Category 1',
+        category: creation_1.Category.FUNNY,
         comments: []
     },
     {
-        id: "13",
+        id: 13,
         title: 'Silly Symphonies - The Skeleton Dance',
         creator_id: 1,
         youtube_id: 'vOGhAV-84iI',
         description: 'As we hear the chimes at midnight and bats flutter from a belfry; as a hound howls at the full moon and black cats brawl on the ...',
-        category: 'Category 3',
+        category: creation_1.Category.HEARTFELT,
         comments: []
     },
     {
-        id: "14",
+        id: 14,
         title: 'Silly Symphony Little Hiawatha',
         creator_id: 7,
         youtube_id: 'PZ7D6kp8PIU',
         description: 'Subscribe My Channel for More & New Cartoon videos ▻▻ https://goo.gl/UgQckA You will find nice cartoon videos, Cartoon for ...',
-        category: 'Category 3',
+        category: creation_1.Category.HEARTFELT,
         comments: []
     },
     {
-        id: "15",
+        id: 15,
         title: 'HILARIOUS Minecraft Animation Which Will Make You CRY Of LAUGHTER!',
         creator_id: 2,
         youtube_id: 'FNApaFRSSyc',
         description: 'HILARIOUS Minecraft Animation Which Will Make You CRY Of LAUGHTER!This hilarious minecraft animation will make you cry of ...',
-        category: 'Category 1',
+        category: creation_1.Category.HEARTFELT,
         comments: []
     },
     {
-        id: "16",
+        id: 16,
         title: 'Animation Silly Symphony Lambert The Sheepish Lion Disney Movies   Movies For Kids   A6',
         creator_id: 0,
         youtube_id: 'D_gXvAUUdUQ',
         description: 'Subscribe My Channel for More & New Cartoon videos ▻▻ https://goo.gl/LcZxEu You will find nice cartoon videos, Cartoon for ...',
-        category: 'Category 4',
+        category: creation_1.Category.HEARTFELT,
         comments: []
     },
     {
-        id: "17",
+        id: 17,
         title: 'Try Watching This HILARIOUS Animation WITHOUT Laughing!',
         creator_id: 8,
         youtube_id: 'dJUhkXTjewM',
         description: 'Get the NEW merch! https://fanjoy.co/collections/KwebbelkopTry Watching This HILARIOUS Animation WITHOUT Laughing!Video ...',
-        category: 'Category 4',
+        category: creation_1.Category.HEARTFELT,
         comments: []
     },
     {
-        id: "19",
+        id: 19,
         title: 'MOANA | Funniest Hei Hei moments from the Disney Animated Movie',
         creator_id: 3,
         youtube_id: 'X9psEx5TNTU',
         description: "Watch our compilation of the funniest HEI HEI the chicken moments from Disney's MOANA. Keep up-to-date on the latest FAMILY ...",
-        category: 'Category 3',
+        category: creation_1.Category.MISC,
         comments: []
     },
     {
-        id: "20",
+        id: 20,
         title: 'Animation Silly Symphony Water Babies Disney Movies   Movies For Kids   Animation Movi6',
         creator_id: 8,
         youtube_id: '30OE97OtZ9E',
         description: 'Subscribe My Channel for More & New Cartoon videos ▻▻ https://goo.gl/LcZxEu You will find nice cartoon videos, Cartoon for ...',
-        category: 'Category 1',
+        category: creation_1.Category.MISC,
         comments: []
     },
     {
-        id: "21",
+        id: 21,
         title: 'Animation Silly Symphony Little Hiawatha Disney Movies   Movies For Kids   Animation M6',
         creator_id: 0,
         youtube_id: 'bulNsPAeLRQ',
         description: 'Subscribe My Channel for More & New Cartoon videos ▻▻ https://goo.gl/LcZxEu You will find nice cartoon videos, Cartoon for ...',
-        category: 'Category 2',
+        category: creation_1.Category.MISC,
         comments: []
     }
 ];
@@ -5396,22 +5654,23 @@ exports.__esModule = true;
 exports.CreatorPageComponent = void 0;
 var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 var router_1 = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-var creator_service_1 = __webpack_require__(/*! ../creator/creator.service */ "./src/creator/creator.service.ts");
+var store_1 = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js");
+var CreatorSelectors = __webpack_require__(/*! ../creator/creator.selector */ "./src/creator/creator.selector.ts");
 var netflix_feed_component_1 = __webpack_require__(/*! ../netflix-feed/netflix-feed.component */ "./src/netflix-feed/netflix-feed.component.ts");
 var CreatorPageComponent = /** @class */ (function () {
-    function CreatorPageComponent(creatorService, route) {
-        this.creatorService = creatorService;
+    function CreatorPageComponent(store, route) {
+        this.store = store;
         this.route = route;
         this.modes = netflix_feed_component_1.FeedMode;
     }
     CreatorPageComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.paramMap.subscribe(function (params) {
-            _this.creator = _this.creatorService.getCreatorByName(params.get('name'));
+            _this.creator = _this.store.pipe(store_1.select(CreatorSelectors.selectCreationById, { creatorId: Number(params.get('id')) }));
         });
     };
     CreatorPageComponent.ctorParameters = function () { return [
-        { type: creator_service_1.CreatorService },
+        { type: store_1.Store },
         { type: router_1.ActivatedRoute }
     ]; };
     CreatorPageComponent = __decorate([
@@ -5428,44 +5687,87 @@ exports.CreatorPageComponent = CreatorPageComponent;
 
 /***/ }),
 
-/***/ "./src/creator/creator.service.ts":
+/***/ "./src/creator/creator.reducer.ts":
 /*!****************************************!*\
-  !*** ./src/creator/creator.service.ts ***!
+  !*** ./src/creator/creator.reducer.ts ***!
   \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 exports.__esModule = true;
-exports.CreatorService = void 0;
-var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-var rxjs_1 = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+exports.reducer = void 0;
+var store_1 = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js");
+var creator_1 = __webpack_require__(/*! ./creator */ "./src/creator/creator.ts");
+var AppRootActions = __webpack_require__(/*! ../app/app.actions */ "./src/app/app.actions.ts");
 var creator_database_1 = __webpack_require__(/*! ./creator_database */ "./src/creator/creator_database.ts");
-var CreatorService = /** @class */ (function () {
-    function CreatorService() {
+var appRootReducer = store_1.createReducer(creator_1.initialState, store_1.on(AppRootActions.initialize_state, function (state) { return ({ creators: creator_database_1.CREATOR_LIST }); }));
+function reducer(state, action) {
+    return appRootReducer(state, action);
+}
+exports.reducer = reducer;
+
+
+/***/ }),
+
+/***/ "./src/creator/creator.selector.ts":
+/*!*****************************************!*\
+  !*** ./src/creator/creator.selector.ts ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+exports.__esModule = true;
+exports.selectCreationById = void 0;
+var store_1 = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js");
+function creatorsFromAppState(state) {
+    return state.creator.creators;
+}
+function creatorById(creators, props) {
+    var creatorId = props.creatorId;
+    if (creatorId == null) {
+        console.log('creatorById called with no creatorId');
+        return null;
     }
-    CreatorService.prototype.getCreatorByName = function (name) {
-        var creator = creator_database_1.CREATOR_LIST.filter(function (creator) {
-            return creator.name == name;
-        })[0];
-        return rxjs_1.of(creator);
-    };
-    CreatorService.ctorParameters = function () { return []; };
-    CreatorService = __decorate([
-        core_1.Injectable({
-            providedIn: 'root'
-        })
-    ], CreatorService);
-    return CreatorService;
-}());
-exports.CreatorService = CreatorService;
+    else if (creators == null) {
+        console.log('creatorById called with null creators');
+        return null;
+    }
+    else {
+        var res = creators.filter(function (creator) { return creator.id == creatorId; });
+        if (res.length == 0) {
+            console.log('No creator found with ID ' + creatorId);
+            return null;
+        }
+        else if (res.length > 1) {
+            console.log('More than one creator found with ID ' + creatorId);
+            return null;
+        }
+        return res[0];
+    }
+}
+exports.selectCreationById = store_1.createSelector(creatorsFromAppState, creatorById);
+
+
+/***/ }),
+
+/***/ "./src/creator/creator.ts":
+/*!********************************!*\
+  !*** ./src/creator/creator.ts ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+exports.__esModule = true;
+exports.initialState = void 0;
+exports.initialState = {
+    creators: []
+};
 
 
 /***/ }),
@@ -5631,7 +5933,7 @@ exports.JoinModalComponent = JoinModalComponent;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvbGFuZGluZy1wYWdlL2xhbmRpbmctcGFnZS5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".container {\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9sYW5kaW5nLXBhZ2UvbGFuZGluZy1wYWdlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQSIsImZpbGUiOiJzcmMvbGFuZGluZy1wYWdlL2xhbmRpbmctcGFnZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRhaW5lciB7XHJcbn0iXX0= */");
 
 /***/ }),
 
@@ -5657,8 +5959,10 @@ exports.__esModule = true;
 exports.LandingPageComponent = void 0;
 var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 var netflix_feed_component_1 = __webpack_require__(/*! ../netflix-feed/netflix-feed.component */ "./src/netflix-feed/netflix-feed.component.ts");
+var creation_1 = __webpack_require__(/*! ../creation/creation */ "./src/creation/creation.ts");
 var LandingPageComponent = /** @class */ (function () {
     function LandingPageComponent() {
+        this.categories = creation_1.Category;
         this.modes = netflix_feed_component_1.FeedMode;
     }
     LandingPageComponent.prototype.ngOnInit = function () {
@@ -5822,6 +6126,110 @@ platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1
 
 /***/ }),
 
+/***/ "./src/modify-creation-form/modify-creation-form.actions.ts":
+/*!******************************************************************!*\
+  !*** ./src/modify-creation-form/modify-creation-form.actions.ts ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+exports.__esModule = true;
+exports.modify_creation = void 0;
+var store_1 = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js");
+exports.modify_creation = store_1.createAction('[modify-creation-form] Modify Creation', store_1.props());
+
+
+/***/ }),
+
+/***/ "./src/modify-creation-form/modify-creation-form.component.css":
+/*!*********************************************************************!*\
+  !*** ./src/modify-creation-form/modify-creation-form.component.css ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvbW9kaWZ5LWNyZWF0aW9uLWZvcm0vbW9kaWZ5LWNyZWF0aW9uLWZvcm0uY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/modify-creation-form/modify-creation-form.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/modify-creation-form/modify-creation-form.component.ts ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+exports.__esModule = true;
+exports.ModifyCreationFormComponent = void 0;
+var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+var forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+var store_1 = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js");
+var creation_1 = __webpack_require__(/*! ../creation/creation */ "./src/creation/creation.ts");
+var ComponentActions = __webpack_require__(/*! ./modify-creation-form.actions */ "./src/modify-creation-form/modify-creation-form.actions.ts");
+var ModifyCreationFormComponent = /** @class */ (function () {
+    function ModifyCreationFormComponent(store) {
+        this.store = store;
+        this.categories = creation_1.Category;
+        this.creationForm = new forms_1.FormGroup({
+            youtubeLink: new forms_1.FormControl(''),
+            category: new forms_1.FormControl(),
+            title: new forms_1.FormControl(''),
+            description: new forms_1.FormControl('')
+        });
+    }
+    ModifyCreationFormComponent.prototype.ngOnInit = function () {
+    };
+    ModifyCreationFormComponent.prototype.onSubmit = function () {
+        var fullYoutubeLink = this.creationForm.controls['youtubeLink'].value;
+        var youtubeId = fullYoutubeLink.split("=")[1];
+        var props = {
+            'youtubeId': youtubeId,
+            'title': this.creationForm.controls['title'].value,
+            'category': this.creationForm.controls['category'].value,
+            'description': this.creationForm.controls['description'].value,
+            'creatorId': this.creatorId,
+            'creationId': null
+        };
+        this.store.dispatch(ComponentActions.modify_creation(props));
+        this.creationForm.reset();
+        var jq = $('#createCreationModal');
+        jq.modal("hide");
+    };
+    ModifyCreationFormComponent.ctorParameters = function () { return [
+        { type: store_1.Store }
+    ]; };
+    ModifyCreationFormComponent.propDecorators = {
+        creatorId: [{ type: core_1.Input }]
+    };
+    ModifyCreationFormComponent = __decorate([
+        core_1.Component({
+            selector: 'app-modify-creation-form',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./modify-creation-form.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/modify-creation-form/modify-creation-form.component.html"))["default"],
+            styles: [__importDefault(__webpack_require__(/*! ./modify-creation-form.component.css */ "./src/modify-creation-form/modify-creation-form.component.css"))["default"]]
+        })
+    ], ModifyCreationFormComponent);
+    return ModifyCreationFormComponent;
+}());
+exports.ModifyCreationFormComponent = ModifyCreationFormComponent;
+
+
+/***/ }),
+
 /***/ "./src/navbar/navbar.component.css":
 /*!*****************************************!*\
   !*** ./src/navbar/navbar.component.css ***!
@@ -5927,10 +6335,30 @@ var CreationSection = /** @class */ (function () {
 var NetflixFeedComponent = /** @class */ (function () {
     function NetflixFeedComponent(store) {
         this.store = store;
+        this.isCreatable = false;
     }
     NetflixFeedComponent.prototype.ngOnInit = function () {
     };
+    NetflixFeedComponent.prototype.creationsPerSection = function (currentSectionNumber) {
+        // If the feed isCreatable, we leave extra room for the creation thumbnail
+        if (this.isCreatable) {
+            if (this.mode != FeedMode.BY_CREATOR) {
+                console.log("Feed isCreatable, but mode is " + this.mode);
+                return CREATIONS_PER_SECTION;
+            }
+            else if (currentSectionNumber == 0) {
+                return CREATIONS_PER_SECTION - 1;
+            }
+            else {
+                return CREATIONS_PER_SECTION;
+            }
+        }
+        else {
+            return CREATIONS_PER_SECTION;
+        }
+    };
     NetflixFeedComponent.prototype.getSectionsWithKey = function (key) {
+        var _this = this;
         var creationStream;
         if (this.mode == FeedMode.BY_CATEGORY) {
             creationStream = this.store.pipe(store_1.select(CreationSelectors.selectCreationsByCategory, { category: key }));
@@ -5948,16 +6376,17 @@ var NetflixFeedComponent = /** @class */ (function () {
             currentSection.section = currentSectionNumber;
             for (var _i = 0, creations_1 = creations; _i < creations_1.length; _i++) {
                 var creation = creations_1[_i];
-                if (currentSection.creations.length < CREATIONS_PER_SECTION) {
+                if (currentSection.creations.length < _this.creationsPerSection(currentSectionNumber)) {
                     currentSection.creations.push(creation);
                 }
                 else {
                     res.push(currentSection);
+                    currentSectionNumber++;
                     currentSection = new CreationSection();
-                    currentSection.creations = [];
+                    currentSection.creations = [creation];
                 }
             }
-            if (currentSection.creations.length > 0 && currentSection.creations.length < CREATIONS_PER_SECTION) {
+            if (currentSection.creations.length > 0) {
                 res.push(currentSection);
             }
             // Set indexes of surrounding sections
@@ -5980,9 +6409,6 @@ var NetflixFeedComponent = /** @class */ (function () {
                     section.prevSection = index - 1;
                 }
             });
-            if (key == 'Category 2') {
-                console.log(res);
-            }
             return res;
         }));
         return splitCreations;
@@ -5992,9 +6418,9 @@ var NetflixFeedComponent = /** @class */ (function () {
     ]; };
     NetflixFeedComponent.propDecorators = {
         key: [{ type: core_1.Input }],
-        category: [{ type: core_1.Input }],
         mode: [{ type: core_1.Input }],
-        carouselID: [{ type: core_1.Input }]
+        carouselID: [{ type: core_1.Input }],
+        isCreatable: [{ type: core_1.Input }]
     };
     NetflixFeedComponent = __decorate([
         core_1.Component({
@@ -6081,6 +6507,23 @@ __webpack_require__(/*! zone.js/dist/zone */ "./node_modules/zone.js/dist/zone.j
 
 /***/ }),
 
+/***/ "./src/primary-comment/primary-comment.actions.ts":
+/*!********************************************************!*\
+  !*** ./src/primary-comment/primary-comment.actions.ts ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+exports.__esModule = true;
+exports.add_reply = void 0;
+var store_1 = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js");
+exports.add_reply = store_1.createAction('[Primary Comment] add reply', store_1.props());
+
+
+/***/ }),
+
 /***/ "./src/primary-comment/primary-comment.component.css":
 /*!***********************************************************!*\
   !*** ./src/primary-comment/primary-comment.component.css ***!
@@ -6115,10 +6558,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 exports.__esModule = true;
 exports.PrimaryCommentComponent = void 0;
 var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-var creation_service_1 = __webpack_require__(/*! ../creation/creation.service */ "./src/creation/creation.service.ts");
+var store_1 = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js");
+var ComponentActions = __webpack_require__(/*! ./primary-comment.actions */ "./src/primary-comment/primary-comment.actions.ts");
 var PrimaryCommentComponent = /** @class */ (function () {
-    function PrimaryCommentComponent(creationService) {
-        this.creationService = creationService;
+    function PrimaryCommentComponent(store) {
+        this.store = store;
         this.replyButtonClicked = false;
     }
     PrimaryCommentComponent.prototype.onReplyButtonClicked = function () {
@@ -6128,11 +6572,15 @@ var PrimaryCommentComponent = /** @class */ (function () {
     };
     PrimaryCommentComponent.prototype.commentIsSubmitted = function (event) {
         var submittedComment = event;
-        this.creationService.addReplyToPrimaryComment(this.creationId, this.primaryCommentIndex, submittedComment);
+        this.store.dispatch(ComponentActions.add_reply({
+            'creationId': this.creationId,
+            'primaryCommentIndex': this.primaryCommentIndex,
+            'reply': submittedComment
+        }));
         this.replyButtonClicked = false;
     };
     PrimaryCommentComponent.ctorParameters = function () { return [
-        { type: creation_service_1.CreationService }
+        { type: store_1.Store }
     ]; };
     PrimaryCommentComponent.propDecorators = {
         primaryComment: [{ type: core_1.Input }],
