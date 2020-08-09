@@ -13,5 +13,6 @@
       </div>
     </div>
   </div>
-  <app-feed [key]="(creator | async).name" [mode]="modes.BY_CREATOR"></app-feed>  
+  <br>
+  <app-netflix-feed [key]="(creator | async).id" [mode]="modes.BY_CREATOR"></app-netflix-feed>  
 </div>

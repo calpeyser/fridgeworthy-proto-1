@@ -28,7 +28,6 @@ class CreationSection {
 export class NetflixFeedComponent implements OnInit {
 
   @Input() key : String;
-  @Input() category: String
   @Input() mode : FeedMode;
   @Input() carouselID : Number;
 
@@ -36,6 +35,7 @@ export class NetflixFeedComponent implements OnInit {
 
   ngOnInit() {
   }
+  
   getSectionsWithKey(key : String) : Observable<CreationSection[]> {
     var creationStream : Observable<Creation[]>;
     if (this.mode == FeedMode.BY_CATEGORY) {
