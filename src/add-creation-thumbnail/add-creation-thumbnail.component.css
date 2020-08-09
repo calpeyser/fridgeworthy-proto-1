@@ -1,0 +1,48 @@
+h1 {
+    text-align: center;
+    font-size: 0.75vw;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 0.50vw;
+  }
+  
+  img {
+    height: 200px;
+  }
+  
+  .container {
+    position: relative;
+    color: black;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+  }
+  
+  .container:hover .overlay {
+    opacity: 0.75;
+  }
+  
+  .overlay_text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  

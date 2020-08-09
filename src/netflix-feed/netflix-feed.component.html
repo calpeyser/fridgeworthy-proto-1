@@ -3,8 +3,12 @@
     <div class="container">
       <div
         class="{{i == 0 ? 'carousel-item active' : 'carousel-item'}}"
-        *ngFor="let creationSection of (getSectionsWithKey(category) | async); let i = index">
+        *ngFor="let creationSection of (getSectionsWithKey(key) | async); let i = index">
         <div class="row">
+          <app-add-creation-thumbnail
+            class="col-3"
+            *ngIf="isCreatable && i==0">
+          </app-add-creation-thumbnail>
           <app-creation-thumbnail
             class="col-3"
             [creation]="creation"

@@ -28,14 +28,32 @@ class CreationSection {
 export class NetflixFeedComponent implements OnInit {
 
   @Input() key : String;
-  @Input() category: String
   @Input() mode : FeedMode;
   @Input() carouselID : Number;
+
+  @Input() isCreatable : boolean = false;
 
   constructor(private store : Store) { }
 
   ngOnInit() {
   }
+  
+  creationsPerSection(currentSectionNumber : Number) : Number {
+    // If the feed isCreatable, we leave extra room for the creation thumbnail
+    if (this.isCreatable) {
+      if (this.mode != FeedMode.BY_CREATOR) {
+        console.log("Feed isCreatable, but mode is " + this.mode)
+        return CREATIONS_PER_SECTION
+      } else if (currentSectionNumber == 0) {
+        return CREATIONS_PER_SECTION - 1
+      } else {
+        return CREATIONS_PER_SECTION
+      }
+    } else {
+      return CREATIONS_PER_SECTION
+    }
+  }
+
   getSectionsWithKey(key : String) : Observable<CreationSection[]> {
     var creationStream : Observable<Creation[]>;
     if (this.mode == FeedMode.BY_CATEGORY) {
@@ -43,6 +61,7 @@ export class NetflixFeedComponent implements OnInit {
     } else if (this.mode == FeedMode.BY_CREATOR) {
       creationStream = this.store.pipe(select(CreationSelectors.selectCreationsByCreatorId, { creatorId: key }))
     }
+
     var splitCreations : Observable<CreationSection[]>;
 
     // Fill sections
@@ -52,16 +71,18 @@ export class NetflixFeedComponent implements OnInit {
       var currentSection : CreationSection = new CreationSection();
       currentSection.creations = []
       currentSection.section = currentSectionNumber;
+
       for (let creation of creations) {
-        if (currentSection.creations.length < CREATIONS_PER_SECTION) {
+        if (currentSection.creations.length < this.creationsPerSection(currentSectionNumber)) {
           currentSection.creations.push(creation)
         } else {
           res.push(currentSection)
+          currentSectionNumber++
           currentSection = new CreationSection();
-          currentSection.creations = []
+          currentSection.creations = [creation]
         }
       }
-      if (currentSection.creations.length > 0 && currentSection.creations.length < CREATIONS_PER_SECTION) {
+      if (currentSection.creations.length > 0) {
         res.push(currentSection)
       }
 

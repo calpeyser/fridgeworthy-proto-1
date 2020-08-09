@@ -26,6 +26,9 @@ import { CommentSectionComponent } from '../comment-section/comment-section.comp
 import { PrimaryCommentComponent } from '../primary-comment/primary-comment.component';
 import { CommentBoxComponent } from '../comment-box/comment-box.component';
 import { SecondaryCommentComponent } from '../secondary-comment/secondary-comment.component';
+import { AddCreationThumbnailComponent } from '../add-creation-thumbnail/add-creation-thumbnail.component';
+import { CreateCreationModalComponent } from '../create-creation-modal/create-creation-modal.component';
+import { ModifyCreationFormComponent } from '../modify-creation-form/modify-creation-form.component';
 
 @NgModule({
   imports: [
@@ -58,6 +61,9 @@ import { SecondaryCommentComponent } from '../secondary-comment/secondary-commen
     PrimaryCommentComponent,
     CommentBoxComponent,
     SecondaryCommentComponent,
+    AddCreationThumbnailComponent,
+    CreateCreationModalComponent,
+    ModifyCreationFormComponent,
   ],
   bootstrap:    [ AppComponent ]
 })
