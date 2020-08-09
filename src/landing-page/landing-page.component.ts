@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FeedMode } from '../netflix-feed/netflix-feed.component';
+import { Category } from '../creation/creation';
 
 @Component({
   selector: 'app-landing-page',
@@ -7,7 +8,7 @@ import { FeedMode } from '../netflix-feed/netflix-feed.component';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
-  category : String;
+  categories = Category;
   modes = FeedMode;
 
   constructor() { }

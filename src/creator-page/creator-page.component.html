@@ -14,5 +14,10 @@
     </div>
   </div>
   <br>
-  <app-netflix-feed [key]="(creator | async).id" [mode]="modes.BY_CREATOR"></app-netflix-feed>  
+  <app-netflix-feed 
+    [key]="(creator | async).id"
+    [mode]="modes.BY_CREATOR"
+    [isCreatable]=true>
+  </app-netflix-feed>  
 </div>
+<app-create-creation-modal></app-create-creation-modal>

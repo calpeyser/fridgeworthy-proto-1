@@ -1,13 +1,13 @@
 import { createSelector } from '@ngrx/store';
-import { Creation } from './creation';
+import { Creation, Category } from './creation';
 
 function creationsFromAppState(state : any) : Creation[] {
   return state.creation.creations
 }
 
 function creationsByCategoryFilter(creations : Creation[], props) : Creation[] {
-  const category : String = props.category;
-  if (category == null || category == '') {
+  const category : Category = props.category
+  if (category == null) {
     console.log('creationsByCategoryFilter called with no category');
     return [];
   } else if (creations == null) {
