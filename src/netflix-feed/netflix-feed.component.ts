@@ -77,6 +77,7 @@ export class NetflixFeedComponent implements OnInit {
           currentSection.creations.push(creation)
         } else {
           res.push(currentSection)
+          currentSectionNumber++
           currentSection = new CreationSection();
           currentSection.creations = [creation]
         }

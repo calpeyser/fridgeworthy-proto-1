@@ -40,5 +40,7 @@ export class ModifyCreationFormComponent implements OnInit {
       'creationId': null
     }
     this.store.dispatch(ComponentActions.modify_creation(props))
+    this.creationForm.reset()
+    $('#createCreationModal').modal("hide")
   }
 }

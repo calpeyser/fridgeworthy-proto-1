@@ -2,7 +2,7 @@ import { Action, createReducer, on } from '@ngrx/store';
 import * as AppRootActions from '../app/app.actions';
 import * as CommentSectionActions from '../comment-section/comment-section.actions'
 import * as PrimaryCommentActions from '../primary-comment/primary-comment.actions'
-import * as ModifyCreationFormAactions from '../modify-creation-form/modify-creation-form.actions'
+import * as ModifyCreationFormActions from '../modify-creation-form/modify-creation-form.actions'
 
 import { Creation, State, initialState, PrimaryComment } from './creation';
 import { SILLY_ANIMATION_VIDEOS } from './silly_animation_videos';
@@ -107,7 +107,7 @@ function addReplyHandler(state, props) {
   })}
 }
 
-function modifyCreation(state, props) {
+function modifyCreationHandler(state, props) {
   // Addition of new creation
   if (props['creationId'] == null) {
     var creationId : Number = Math.floor(Math.random() * 1000000000)
@@ -120,6 +120,7 @@ function modifyCreation(state, props) {
       category : props['category'],
       comments : []
     }
+    console.log(newCreation)
     return {creations: [...state.creations, newCreation]}
   }
   // Modification not yet supported
@@ -133,6 +134,7 @@ const appRootReducer = createReducer(
   on(CommentSectionActions.add_dummy_comments, addDummyCommentsHandler),
   on(CommentSectionActions.add_primary_comment, addPrimaryCommentHandler),
   on(PrimaryCommentActions.add_reply, addReplyHandler),
+  on(ModifyCreationFormActions.modify_creation, modifyCreationHandler)
 );
 
 export function reducer(state: State | undefined, action: Action) {
