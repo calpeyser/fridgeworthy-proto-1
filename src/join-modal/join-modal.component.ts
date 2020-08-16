@@ -10,7 +10,6 @@ enum SelectedForm {
   styleUrls: ['./join-modal.component.css']
 })
 export class JoinModalComponent implements OnInit {
-  @Input() modalId : String;
   selectedForm : SelectedForm = SelectedForm.NONE;
   forms = SelectedForm;
 

@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth'
 
 import * as creationReducer from '../creation/creation.reducer';
 import * as creatorReducer from '../creator/creator.reducer';
@@ -30,6 +33,17 @@ import { AddCreationThumbnailComponent } from '../add-creation-thumbnail/add-cre
 import { CreateCreationModalComponent } from '../create-creation-modal/create-creation-modal.component';
 import { ModifyCreationFormComponent } from '../modify-creation-form/modify-creation-form.component';
 
+var firebaseConfig = {
+  apiKey: "AIzaSyAKHPvCb2orlhqg52yo-bs0XgFzC5FouUs",
+  authDomain: "fridgeworthy-proto-1.firebaseapp.com",
+  databaseURL: "https://fridgeworthy-proto-1.firebaseio.com",
+  projectId: "fridgeworthy-proto-1",
+  storageBucket: "fridgeworthy-proto-1.appspot.com",
+  messagingSenderId: "563727717290",
+  appId: "1:563727717290:web:1624bc4a82c97bb82611d3",
+  measurementId: "G-ZKJFQVQ5DV"
+};
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -40,6 +54,9 @@ import { ModifyCreationFormComponent } from '../modify-creation-form/modify-crea
       creation : creationReducer.reducer,
       creator : creatorReducer.reducer,
     }),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
   ],
   declarations: [
     AppComponent,

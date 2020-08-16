@@ -4540,6 +4540,9 @@ var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/c
 var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
 var forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 var store_1 = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js");
+var fire_1 = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm2015/angular-fire.js");
+var firestore_1 = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm2015/angular-fire-firestore.js");
+var auth_1 = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm2015/angular-fire-auth.js");
 var creationReducer = __webpack_require__(/*! ../creation/creation.reducer */ "./src/creation/creation.reducer.ts");
 var creatorReducer = __webpack_require__(/*! ../creator/creator.reducer */ "./src/creator/creator.reducer.ts");
 var app_component_1 = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
@@ -4565,6 +4568,16 @@ var secondary_comment_component_1 = __webpack_require__(/*! ../secondary-comment
 var add_creation_thumbnail_component_1 = __webpack_require__(/*! ../add-creation-thumbnail/add-creation-thumbnail.component */ "./src/add-creation-thumbnail/add-creation-thumbnail.component.ts");
 var create_creation_modal_component_1 = __webpack_require__(/*! ../create-creation-modal/create-creation-modal.component */ "./src/create-creation-modal/create-creation-modal.component.ts");
 var modify_creation_form_component_1 = __webpack_require__(/*! ../modify-creation-form/modify-creation-form.component */ "./src/modify-creation-form/modify-creation-form.component.ts");
+var firebaseConfig = {
+    apiKey: "AIzaSyAKHPvCb2orlhqg52yo-bs0XgFzC5FouUs",
+    authDomain: "fridgeworthy-proto-1.firebaseapp.com",
+    databaseURL: "https://fridgeworthy-proto-1.firebaseio.com",
+    projectId: "fridgeworthy-proto-1",
+    storageBucket: "fridgeworthy-proto-1.appspot.com",
+    messagingSenderId: "563727717290",
+    appId: "1:563727717290:web:1624bc4a82c97bb82611d3",
+    measurementId: "G-ZKJFQVQ5DV"
+};
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -4579,6 +4592,9 @@ var AppModule = /** @class */ (function () {
                     creation: creationReducer.reducer,
                     creator: creatorReducer.reducer
                 }),
+                fire_1.AngularFireModule.initializeApp(firebaseConfig),
+                firestore_1.AngularFirestoreModule,
+                auth_1.AngularFireAuthModule,
             ],
             declarations: [
                 app_component_1.AppComponent,

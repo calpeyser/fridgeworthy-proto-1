@@ -2,30 +2,56 @@
   <form [formGroup]="joinForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="creatorInputFirstName">First Name</label>
-      <input type="text" class="form-control" id="creatorInputFirstName" placeholder="John" formControlName="firstName">
+      <input type="text"
+            class="form-control"
+            id="creatorInputFirstName"
+            placeholder="John"
+            formControlName="firstName" required>
     </div>
     <div class="form-group">
       <label for="creatorInputLastName">Last Name</label>
-      <input type="text" class="form-control" id="creatorInputLastName" placeholder="Doe" vformControlName="lastName">
+      <input type="text"
+            class="form-control"
+            id="creatorInputLastName"
+            placeholder="Doe" 
+            formControlName="lastName" required>
     </div>
     <div class="form-group">
       <label for="creatorInputUsername">Username</label>
-      <input type="text" class="form-control" id="creatorInputUsername" placeholder="Username" formControlName="username">
+      <input type="text" class="form-control" id="creatorInputUsername" placeholder="Username" formControlName="username" required>
     </div>
     <div class="form-group">
       <label for="creatorInputPassword">Password</label>
-      <input type="password" class="form-control" id="creatorInputPassword" placeholder="Password" formControlName="password">
+      <input type="password"
+            class="form-control"
+            id="creatorInputPassword" 
+            placeholder="Password" 
+            formControlName="password"
+            minlength="6"
+            required>
+      <div *ngIf="passwordErrors() && passwordErrors().minlength" style="color:red"> 
+        Password must be at least 6 characters long.
+      </div>
     </div>
     <div class="form-group">
       <label for="creatorInputEmail">Email address</label>
-      <input type="email" class="form-control" id="creatorInputEmail" aria-describedby="emailHelp" placeholder="Enter email" formControlName="email">
+      <input type="email" 
+            class="form-control"
+            id="creatorInputEmail" 
+            aria-describedby="emailHelp" 
+            placeholder="Enter email" 
+            formControlName="email" 
+            required>
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      <div *ngIf="emailErrors() && emailErrors().email" style="color:red">
+        Must be formatted as an email address.
+      </div>
     </div>
     <div class="row">
       <div class="col-8">
         <div class="form-group">
           <label for="creatorDescription">Tell us a bit about yourself!</label>
-          <textarea class="form-control" id="creatorDescription" placeholder="" formControlName="description"></textarea>
+          <textarea class="form-control" id="creatorDescription" placeholder="" formControlName="description" required></textarea>
         </div>
       </div>
       <div class="col-4">
@@ -35,6 +61,7 @@
         </div>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" [disabled]="!joinForm.valid" class="btn btn-primary">Submit</button>
+    <button id="dismissButton" #dismissButton visible="false" type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
   </form>
 </div>

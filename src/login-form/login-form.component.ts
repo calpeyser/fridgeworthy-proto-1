@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-login-form',
@@ -7,19 +9,30 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
-  
+  @ViewChild('dismissButton') dismissButton : ElementRef;
+
+  errorMessage : string;
+
   loginForm = new FormGroup({
     email_username: new FormControl(''),
     password: new FormControl(''),
   })
 
-  constructor() { }
+  constructor(private auth : AuthService) { }
 
   ngOnInit() {
   }
 
   onSubmit() {
-    alert("Login Submitted")
+    this.auth.signIn(
+      this.loginForm.value['email_username'],
+      this.loginForm.value['password'])
+      .then(res => {
+        this.dismissButton.nativeElement.click()
+      })
+      .catch(error => {
+        this.errorMessage = error.message;
+      })
   }
 
 }

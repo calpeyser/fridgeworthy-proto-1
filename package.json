@@ -12,13 +12,15 @@
     "@angular/platform-browser": "10.0.8",
     "@angular/platform-browser-dynamic": "10.0.8",
     "@angular/router": "10.0.8",
+    "@angular/fire": "6.0.2",
     "@ngrx/effects": "^9.2.0",
     "@ngrx/store": "^9.2.0",
     "@types/jquery": "^3.5.1",
     "jquery": ">=1.8.0",
     "rxjs": "6.6.2",
     "tslib": "^2.0.0",
-    "zone.js": "0.10.3"
+    "zone.js": "0.10.3",
+    "firebase": "7.18"
   },
   "scripts": {
     "ng": "ng",

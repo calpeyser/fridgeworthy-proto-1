@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -8,6 +8,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class ViewerJoinComponent implements OnInit {
   @Input() visible : boolean;
+  @ViewChild('dismissButton') dismissButton : ElementRef;
 
   joinForm = new FormGroup({
     firstName: new FormControl(''),
@@ -24,8 +25,8 @@ export class ViewerJoinComponent implements OnInit {
 
   onSubmit() {
     var message = "Submitted, first name: " + this.joinForm.value['firstName']
-
     alert(message)
+    this.dismissButton.nativeElement.click()
   }
 
 }

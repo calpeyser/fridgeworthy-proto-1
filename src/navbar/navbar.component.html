@@ -1,8 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" routerLink="">Fridgeworthy</a>
 
+    <button (click)="getUser()">user</button>
+
+    <div *ngIf="this.auth.user | async as user">
+        {{user.firstName}}
+    </div>
+
     <button class="btn btn-outline-success my-2 my-sm-0 ml-auto" type="submit" data-toggle="modal" data-target="#joinModal">Join</button>
     <button class="btn btn-outline-info my-2 my-sm-0 ml-3" type="submit" data-toggle="modal" data-target="#loginModal">Login</button>
 </nav>
-<app-join-modal [modalId]="'joinModal'"></app-join-modal>
-<app-login-modal [modalId]="'loginModal'"></app-login-modal>
+<app-join-modal></app-join-modal>
+<app-login-modal></app-login-modal>
