@@ -16,7 +16,7 @@ import * as CreatorSelectors from '../creator/creator.selector';
   styleUrls: ['./creation-page.component.css']
 })
 export class CreationPageComponent implements OnInit {
-  id : Number;
+  id : String;
   creation : Observable<Creation>
   creator : Observable<Creator>
   creationUrl : Observable<SafeUrl>
@@ -29,7 +29,7 @@ export class CreationPageComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      this.id = Number(params.get('id'))
+      this.id = params.get('id')
       this.creation = this.store.pipe(select(CreationSelectors.selectCreationById, { creationId: this.id }))
       this.creator = this.creation.pipe(flatMap(cr => {
         return this.store.pipe(select(CreatorSelectors.selectCreationById, {creatorId : cr.creator_id}))

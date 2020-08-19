@@ -32,7 +32,7 @@ export interface PrimaryComment {
 
 export interface Creation {
   id : Number;
-  creator_id: Number;
+  creator_id: String;
   title: String;
   description: String;
   youtube_id: String;

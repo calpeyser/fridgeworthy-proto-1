@@ -14,11 +14,21 @@
     </div>
   </div>
   <br>
-  <app-netflix-feed 
-    [key]="(creator | async).id"
-    [mode]="modes.BY_CREATOR"
-    [carouselID]="10"
-    [isCreatable]=true>
-  </app-netflix-feed>  
+  <div *ngIf="(isLoggedIn | async); else elseBlock">
+    <app-netflix-feed 
+      [key]="(creator | async).id"
+      [mode]="modes.BY_CREATOR"
+      [carouselID]="10"
+      [isCreatable]=true>
+    </app-netflix-feed>  
+  </div>
+  <ng-template #elseBlock>
+    <app-netflix-feed 
+      [key]="(creator | async).id"
+      [mode]="modes.BY_CREATOR"
+      [carouselID]="10"
+      [isCreatable]=false>
+    </app-netflix-feed>    
+  </ng-template>
 </div>
 <app-create-creation-modal [creatorId]="(creator | async).id"></app-create-creation-modal>

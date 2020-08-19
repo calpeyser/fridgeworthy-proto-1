@@ -26,7 +26,7 @@ export const selectCreationsByCategory = createSelector(
 
 
 function creationsByCreatorId(creations: Creation[], props) : Creation[] {
-  const creatorId : Number = props.creatorId;
+  const creatorId : String = props.creatorId;
   if (creatorId == null) {
     console.log('creationsByCreatorId called with no creatorId')
     return [];

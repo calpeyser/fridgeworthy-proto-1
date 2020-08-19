@@ -6,7 +6,7 @@ function creatorsFromAppState(state : any) : Creator[] {
 }
 
 function creatorById(creators: Creator[], props) : Creator {
-    const creatorId : Number = props.creatorId;
+    const creatorId : String = props.creatorId;
     if (creatorId == null) {
       console.log('creatorById called with no creatorId')
       return null

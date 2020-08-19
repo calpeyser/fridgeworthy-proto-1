@@ -1,5 +1,5 @@
 export interface Creator {
-  id: Number;
+  id: String;
   name: String;
   img_path: String;
   bio: String;
